@@ -3,7 +3,6 @@ openai-whisper==20240930
 transformers==4.45.1
 TTS==0.22.0
 pyannote.audio==3.3.2
-develop==1.0.2
 git+https://github.com/speechbrain/speechbrain.git
 deepface==0.0.93
 packaging==20.9
