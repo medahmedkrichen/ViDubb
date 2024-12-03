@@ -26,4 +26,7 @@ def main():
   print(args.target_language)
   print(args.LipSync)
   print(args.Bg_sound)
+  print('##########')
+  print(os.getenv('HF_TOKEN'))
+  print(os.getenv('Groq_TOKEN'))
   
