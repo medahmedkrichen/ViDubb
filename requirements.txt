@@ -5,7 +5,7 @@ TTS==0.22.0
 pyannote.audio==3.3.2
 git+https://github.com/speechbrain/speechbrain.git
 deepface==0.0.93
-packaging===23.1
+packaging===20.9
 audio-separator==0.24.1
 onnxruntime==1.20.1
 yt-dlp==2024.11.18
