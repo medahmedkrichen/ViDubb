@@ -1,6 +1,7 @@
 import os, sys, argparse
+from dotenv import load_dotenv
 
-
+load_dotenv()
 
 parser = argparse.ArgumentParser(description='Choose between YouTube or video URL')
 
