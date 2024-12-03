@@ -29,4 +29,7 @@ def main():
   print('##########')
   print(os.getenv('HF_TOKEN'))
   print(os.getenv('Groq_TOKEN'))
+
+if __name__ == '__main__':
+	main()
   
