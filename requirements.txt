@@ -1,4 +1,4 @@
-pip install python-dotenv
+pip install python-dotenv==1.0.1
 pip install openai-whisper==20240930
 pip install transformers==4.45.1
 pip install TTS==0.22.0
