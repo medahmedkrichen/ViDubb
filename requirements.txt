@@ -1,12 +1,12 @@
-pip install python-dotenv==1.0.1
-pip install openai-whisper==20240930
-pip install transformers==4.45.1
-pip install TTS==0.22.0
-pip install pyannote.audio==3.3.2
-pip install git+https://github.com/speechbrain/speechbrain.git@develop==1.0.2
-pip install deepface==0.0.93
-pip install packaging==20.9
-pip install audio-separator==0.24.1
-pip install onnxruntime==1.20.1
-pip install yt-dlp==2024.11.18
-pip install groq==0.13.0
+python-dotenv==1.0.1
+openai-whisper==20240930
+transformers==4.45.1
+TTS==0.22.0
+pyannote.audio==3.3.2
+git+https://github.com/speechbrain/speechbrain.git@develop==1.0.2
+deepface==0.0.93
+packaging==20.9
+audio-separator==0.24.1
+onnxruntime==1.20.1
+yt-dlp==2024.11.18
+groq==0.13.0
