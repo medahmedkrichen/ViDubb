@@ -7,7 +7,7 @@ def install_if_not_installed(import_name, install_command):
     try:
         __import__(import_name)
     except ImportError:
-        os.system(f"{install_command}")
+        os.system(f"{install_command} > /dev/null 2>&1")
 	    
 install_if_not_installed('TTS', 'pip install --no-deps TTS==0.21.0')
 install_if_not_installed('deepface', 'pip install deepface==0.0.93')
@@ -726,8 +726,8 @@ def main():
 	print(args.Bg_sound)
 	print('##########')
 	print(os.getenv('HF_TOKEN'))
-	print(os.getenv('Groq_TOKEN'))
-	vidubb = VideoDubbing(video_path, args.source_language, args.target_language, args.LipSync, not args.Bg_sound, os.getenv('Groq_TOKEN'), os.getenv('HF_TOKEN'))
+	# print(os.getenv('Groq_TOKEN'))
+	vidubb = VideoDubbing(video_path, args.source_language, args.target_language, args.LipSync, not args.Bg_sound, "", os.getenv('HF_TOKEN'))
 	
 if __name__ == '__main__':
 	main()
