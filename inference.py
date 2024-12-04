@@ -7,7 +7,7 @@ def install_if_not_installed(import_name, install_command):
     try:
         __import__(import_name)
     except ImportError:
-        os.system(f"{install_command} > /dev/null 2>&1")
+        os.system(f"{install_command}")
 
 install_if_not_installed('TTS', 'pip install TTS==0.21.0')
 
