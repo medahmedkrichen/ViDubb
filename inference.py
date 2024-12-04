@@ -692,7 +692,7 @@ class VideoDubbing:
         command = f"ffmpeg -i '{self.Video_path}' -i combined_audio.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest output_video.mp4"
         subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
-        from IPython.display import clear_output 
+	from IPython.display import clear_output 
         clear_output()
         
         
@@ -706,14 +706,11 @@ class VideoDubbing:
             save_audio("enhanced.wav", enhanced, df_state.sr())"""
             command = f"ffmpeg -i '{self.Video_path}' -i output.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest denoised_video.mp4"
             subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
-        if self.LipSync and self.Voice_denoising:
-	    os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../denoised_video.mp4' --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
-            # !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../denoised_video.mp4" --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1
+	if self.LipSync and self.Voice_denoising:
+		os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../denoised_video.mp4' --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
             
-        if self.LipSync and not self.Voice_denoising:
-	    os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")  
-            # !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../output_video.mp4" --audio "../combined_audio.wav" --face_det_batch_size 1 --wav2lip_batch_size 1
+	if self.LipSync and not self.Voice_denoising:
+		os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")  
 
 
 def main():
