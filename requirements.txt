@@ -1,6 +1,5 @@
 pyannote.audio==3.3.2
 python-dotenv
-transformers==4.45.1
 speechbrain==1.0.2
 audio-separator==0.24.1
 onnxruntime==1.20.1
