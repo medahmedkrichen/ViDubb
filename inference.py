@@ -9,14 +9,15 @@ def install_if_not_installed(import_name, install_command):
     except ImportError:
         os.system(f"{install_command}")
 
-install_if_not_installed('TTS', 'pip install TTS==0.20.0')
+#install_if_not_installed('TTS', 'pip install TTS==0.20.0')
 install_if_not_installed('deepface', 'pip install deepface==0.0.93')
 #install_if_not_installed('librosa', 'pip install librosa==0.9.1')
-#install_if_not_installed('packaging', 'pip install packaging==20.9')
-install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
-#install_if_not_installed('pyannote.audio', 'pip install pyannote.audio')
+install_if_not_installed('packaging', 'pip install packaging==20.9')
+#install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
 
 
+
+from pyannote.audio import Pipeline
 from audio_separator.separator import Separator
 import whisper
 from transformers import MarianMTModel, MarianTokenizer
@@ -24,7 +25,6 @@ from TTS.api import TTS
 from pydub import AudioSegment
 import shutil
 import subprocess
-from pyannote.audio import Pipeline
 import torch
 from speechbrain.inference.interfaces import foreign_class
 from deepface import DeepFace
