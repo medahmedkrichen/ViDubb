@@ -338,15 +338,6 @@ class VideoDubbing:
                         file_path = os.path.join(root, file)
                         # Delete the file
                         os.remove(file_path)
-         
-            
-            !git clone https://github.com/medahmedkrichen/Wav2Lip
-            #download the pretrained model
-            !wget 'https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/download.aspx?share=EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA' -O 'Wav2Lip/wav2lip_gan.pth'
-            
-            
-            #download pretrained model for face detection
-            !wget "https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth" -O "Wav2Lip/face_detection/detection/sfd/s3fd.pth"
             
             
             
