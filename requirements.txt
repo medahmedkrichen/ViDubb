@@ -30,5 +30,5 @@ jsonlines==1.2.0
 networkx==2.8.8
 pynndescent==0.5.13
 python_crfsuite==0.9.11
-SudachiDict_core==2024102
+SudachiDict_core
 SudachiPy==0.6.9
