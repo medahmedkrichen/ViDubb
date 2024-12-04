@@ -10,10 +10,9 @@ def install_if_not_installed(import_name, install_command):
         os.system(f"{install_command} > /dev/null 2>&1")
 	    
 install_if_not_installed('TTS', 'pip install --no-deps TTS==0.21.0')
-install_if_not_installed('deepface', 'pip install deepface==0.0.93')
-#install_if_not_installed('librosa', 'pip install librosa==0.9.1')
 install_if_not_installed('packaging', 'pip install packaging==20.9')
 install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
+install_if_not_installed('deepface', 'pip install deepface==0.0.93')
 
 
 
