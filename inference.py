@@ -708,13 +708,11 @@ class VideoDubbing:
             subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
         if self.LipSync and self.Voice_denoising:
-            
-	    os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../denoised_video.mp4' --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
+		os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../denoised_video.mp4' --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
             # !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../denoised_video.mp4" --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1
             
         if self.LipSync and not self.Voice_denoising:
-            
-	    os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")  
+		os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")  
             # !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../output_video.mp4" --audio "../combined_audio.wav" --face_det_batch_size 1 --wav2lip_batch_size 1
 
 
