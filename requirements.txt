@@ -1,9 +1,7 @@
 python-dotenv
 openai-whisper==20240930
 transformers==4.45.1
-pyannote.audio==3.3.2
 speechbrain==1.0.2
-deepface==0.0.93
 audio-separator==0.24.1
 onnxruntime==1.20.1
 yt-dlp==2024.11.18
