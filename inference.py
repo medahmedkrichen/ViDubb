@@ -1,4 +1,4 @@
-import os, sys, argparse
+import sys, argparse
 from dotenv import load_dotenv
 from audio_separator.separator import Separator
 import whisper
