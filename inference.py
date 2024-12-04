@@ -23,7 +23,7 @@ from base64 import b64decode
 from scipy.io.wavfile import read as wav_read
 import io
 import ffmpeg
-   
+from IPython.display import clear_output 
 import sys, argparse
 from dotenv import load_dotenv
 from audio_separator.separator import Separator
@@ -692,7 +692,7 @@ class VideoDubbing:
         command = f"ffmpeg -i '{self.Video_path}' -i combined_audio.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest output_video.mp4"
         subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
-	from IPython.display import clear_output 
+	
         clear_output()
         
         
