@@ -8,6 +8,4 @@ yt-dlp==2024.11.18
 groq==0.13.0
 numba==0.60.0
 tiktoken==0.8.0
-TTS
-pyannote.audio
-deepface
+packaging==20.9
