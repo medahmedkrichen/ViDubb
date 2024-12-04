@@ -18,7 +18,7 @@ install_if_not_installed('pyannote.audio', 'pip install pyannote.audio==3.3.2')
 
 
 from IPython.display import HTML, Audio
-from base64 import b64decode
+#from base64 import b64decode
 from scipy.io.wavfile import read as wav_read
 import io
 import ffmpeg
