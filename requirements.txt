@@ -43,3 +43,4 @@ python_crfsuite
 pynndescent
 tzlocal
 hangul_romanize
+tensorflow==2.7.0
