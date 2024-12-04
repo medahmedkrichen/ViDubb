@@ -1,6 +1,6 @@
 openai-whisper
 transformers
-TTS
+TTS==0.22.0
 pyannote.audio
 speechbrain
 deepface
