@@ -14,6 +14,8 @@ install_if_not_installed('TTS', 'pip install TTS==0.22.0')
 install_if_not_installed('pyannote.audio', 'pip install pyannote.audio==3.3.2')
 
 install_if_not_installed('deepface', 'pip install deepface==0.0.93')
+install_if_not_installed('librosa', 'pip install librosa==0.9.1')
+
 install_if_not_installed('packaging', 'pip install packaging==20.9')
 
 
