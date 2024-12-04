@@ -1,4 +1,4 @@
-dotenv
+python-dotenv
 openai-whisper==20240930
 transformers==4.45.1
 TTS==0.22.0
