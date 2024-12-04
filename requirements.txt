@@ -42,3 +42,4 @@ gruut-ipa
 python_crfsuite
 pynndescent
 tzlocal
+hangul_romanize
