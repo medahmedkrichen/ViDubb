@@ -9,6 +9,8 @@ def install_if_not_installed(import_name, install_command):
     except ImportError:
         os.system(f"{install_command}")
 
+install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
+
 install_if_not_installed('TTS', 'pip install TTS==0.21.0')
 
 install_if_not_installed('pyannote.audio', 'pip install pyannote.audio==3.3.2')
