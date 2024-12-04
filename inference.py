@@ -10,15 +10,11 @@ def install_if_not_installed(import_name, install_command):
         os.system(f"{install_command}")
 
 install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
-
-install_if_not_installed('TTS', 'pip install TTS==0.21.0')
-
 install_if_not_installed('pyannote.audio', 'pip install pyannote.audio==3.3.2')
-
 install_if_not_installed('deepface', 'pip install deepface==0.0.93')
 install_if_not_installed('librosa', 'pip install librosa==0.9.1')
-
 install_if_not_installed('packaging', 'pip install packaging==20.9')
+install_if_not_installed('TTS', 'pip install TTS==0.21.0')
 
 from IPython.display import HTML, Audio
 from base64 import b64decode
