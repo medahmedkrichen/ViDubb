@@ -1,4 +1,4 @@
-numpy==1.22.0
+numpy
 python-dotenv==1.0.1
 openai-whisper==20240930
 transformers==4.45.1
@@ -8,6 +8,6 @@ git+https://github.com/speechbrain/speechbrain.git
 deepface==0.0.93
 packaging==23.1
 audio-separator
-onnxruntime==1.20.1
+onnxruntime
 yt-dlp==2024.11.18
 groq==0.13.0
