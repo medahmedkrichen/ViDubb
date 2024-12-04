@@ -4,18 +4,18 @@ import importlib.util
 
 import os
 
-def install_if_not_installed(package_name, import_name, install_command):
+def install_if_not_installed(import_name, install_command):
     try:
         __import__(import_name)
     except ImportError:
         os.system(f"{install_command}")
 
-install_if_not_installed('TTS', 'TTS', 'pip install TTS==0.22.0')
+install_if_not_installed('TTS', 'pip install TTS==0.22.0')
 
-install_if_not_installed('pyannote.audio', 'pyannote.audio', 'pip install pyannote.audio==3.3.2')
+install_if_not_installed('pyannote.audio', 'pip install pyannote.audio==3.3.2')
 
-install_if_not_installed('deepface', 'deepface', 'pip install deepface==0.0.93')
-install_if_not_installed('packaging', 'packaging', 'pip install packaging==20.9')
+install_if_not_installed('deepface', 'pip install deepface==0.0.93')
+install_if_not_installed('packaging', 'pip install packaging==20.9')
 
 
 import sys, argparse
