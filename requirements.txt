@@ -7,5 +7,3 @@ yt-dlp==2024.11.18
 groq==0.13.0
 numba==0.60.0
 tiktoken==0.8.0
-setuptools==69.5.1
-https://raw.githubusercontent.com/AwaleSajil/ghc/master/ghc-1.0-py3-none-any.whl
