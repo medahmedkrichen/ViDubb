@@ -18,6 +18,11 @@ import json
 import re
 from groq import Groq
 
+os.system('pip install TTS==0.22.0') 
+os.system('pip install pyannote.audio==3.3.2')
+os.system('pip install deepface==0.0.93')
+os.system('packaging==20.9')
+
 load_dotenv()
 
 parser = argparse.ArgumentParser(description='Choose between YouTube or video URL')
