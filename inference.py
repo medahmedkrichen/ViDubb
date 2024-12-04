@@ -767,6 +767,8 @@ def main():
 		os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {youtube_link}")
 		video_path = "video_path.mp4"
 
+	if not video_path:
+		video_path = args.video_url
 	
 	print(args.yt_url)
 	print(args.video_url)
@@ -777,7 +779,7 @@ def main():
 	print('##########')
 	print(os.getenv('HF_TOKEN'))
 	print(os.getenv('Groq_TOKEN'))
-	vidubb = VideoDubbing(video_path, source_language, target_language, LipSync, Voice_denoising, Context_translation, huggingface_auth_token)
+	vidubb = VideoDubbing(video_path, args.source_language, args.target_language, args.LipSync, not args.Bg_sound, os.getenv('Groq_TOKEN'), os.getenv('HF_TOKEN'))
 	
 if __name__ == '__main__':
 	main()
