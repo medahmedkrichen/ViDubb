@@ -1,9 +1,14 @@
+
+import os
+os.system('pip install TTS==0.22.0') 
+os.system('pip install pyannote.audio==3.3.2')
+os.system('pip install deepface==0.0.93')
+os.system('packaging==20.9')
 import sys, argparse
 from dotenv import load_dotenv
 from audio_separator.separator import Separator
 import whisper
 from transformers import MarianMTModel, MarianTokenizer
-import os
 from TTS.api import TTS
 from pydub import AudioSegment
 import shutil
@@ -18,10 +23,6 @@ import json
 import re
 from groq import Groq
 
-os.system('pip install TTS==0.22.0') 
-os.system('pip install pyannote.audio==3.3.2')
-os.system('pip install deepface==0.0.93')
-os.system('packaging==20.9')
 
 load_dotenv()
 
