@@ -8,6 +8,4 @@ groq==0.13.0
 numba==0.60.0
 tiktoken==0.8.0
 setuptools==69.5.1
-ffmpeg-python
-youtube-dl
 https://raw.githubusercontent.com/AwaleSajil/ghc/master/ghc-1.0-py3-none-any.whl
