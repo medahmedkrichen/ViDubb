@@ -43,4 +43,5 @@ python_crfsuite
 pynndescent
 tzlocal
 hangul_romanize
---upgrade tensorflow
+tensorflow
+keras
