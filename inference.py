@@ -1,9 +1,23 @@
 
 import os
-os.system('pip install TTS==0.22.0') 
-os.system('pip install pyannote.audio==3.3.2')
-os.system('pip install deepface==0.0.93')
-os.system('packaging==20.9')
+import importlib.util
+
+def install_if_not_installed(package_name, install_command):
+    package_spec = importlib.util.find_spec(package_name)
+    if package_spec is None:
+        os.system(install_command)
+
+# Check and install TTS
+install_if_not_installed('TTS', 'pip install TTS==0.22.0')
+
+# Check and install pyannote.audio
+install_if_not_installed('pyannote.audio', 'pip install pyannote.audio==3.3.2')
+
+# Check and install deepface
+install_if_not_installed('deepface', 'pip install deepface==0.0.93')
+
+# Check and install packaging
+install_if_not_installed('packaging', 'pip install packaging==20.9')
 import sys, argparse
 from dotenv import load_dotenv
 from audio_separator.separator import Separator
