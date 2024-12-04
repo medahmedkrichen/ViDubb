@@ -7,3 +7,12 @@ yt-dlp==2024.11.18
 groq==0.13.0
 numba==0.60.0
 ffmpeg-python
+gruut==2.2.3
+encodec==0.1.1
+gruut_lang_en==2.0.0
+ gruut_lang_de==2.0.1
+gruut_lang_fr==2.0.2
+gruut_lang_es==2.0.1
+librosa==0.10.0
+scipy==1.11.4
+umap-learn==0.5.1
