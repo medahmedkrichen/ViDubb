@@ -712,8 +712,8 @@ class VideoDubbing:
         if self.LipSync and not self.Voice_denoising:
             os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
 def main():
-	if youtube_link:
-		os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {youtube_link}")
+	if args.yt_url:
+		os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {args.yt_url}")
 		video_path = "video_path.mp4"
 
 	if not video_path:
