@@ -10,7 +10,7 @@ ffmpeg-python
 gruut==2.2.3
 encodec==0.1.1
 gruut_lang_en==2.0.0
- gruut_lang_de==2.0.1
+gruut_lang_de==2.0.1
 gruut_lang_fr==2.0.2
 gruut_lang_es==2.0.1
 librosa==0.10.0
