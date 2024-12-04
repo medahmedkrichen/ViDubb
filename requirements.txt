@@ -43,5 +43,3 @@ python_crfsuite
 pynndescent
 tzlocal
 hangul_romanize
-tensorflow
-keras
