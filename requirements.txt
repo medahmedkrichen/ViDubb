@@ -1,5 +1,5 @@
-openai-whisper==20240927
-transformers==4.33.0
+openai-whisper
+transformers
 TTS==0.22.0
 pyannote.audio==3.3.2
 speechbrain==1.0.2
