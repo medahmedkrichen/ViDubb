@@ -11,10 +11,3 @@ setuptools==69.5.1
 ffmpeg-python
 youtube-dl
 https://raw.githubusercontent.com/AwaleSajil/ghc/master/ghc-1.0-py3-none-any.whl
-librosa
-numpy
-opencv-contrib-python
-opencv-python
-torch
-torchvision
-tqdm
