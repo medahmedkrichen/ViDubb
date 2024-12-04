@@ -9,12 +9,26 @@ def install_if_not_installed(import_name, install_command):
     except ImportError:
         os.system(f"{install_command}")
 
-install_if_not_installed('TTS', 'pip install TTS==0.20.0')
+"""install_if_not_installed('TTS', 'pip install TTS==0.20.0')
 install_if_not_installed('deepface', 'pip install deepface==0.0.93')
 install_if_not_installed('librosa', 'pip install librosa==0.9.1')
 install_if_not_installed('packaging', 'pip install packaging==20.9')
 install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
-install_if_not_installed('huggingface-hub', 'pip install huggingface-hub==0.7.0')
+install_if_not_installed('huggingface-hub', 'pip install huggingface-hub==0.7.0')"""
+
+install_if_not_installed("numba" ,"pip install -U numba")
+install_if_not_installed("openai-whisper","pip install openai-whisper==20240930")
+install_if_not_installed("transformers","pip install transformers==4.45.1")
+install_if_not_installed("pyannote.audio","pip install pyannote.audio==3.3.2")
+install_if_not_installed("speechbrain","pip install speechbrain==1.0.2")
+install_if_not_installed("deepface","pip install deepface==0.0.93")
+install_if_not_installed("packaging","pip install packaging==20.9")
+install_if_not_installed("audio-separato","pip install audio-separator==0.24.1")
+install_if_not_installed("onnxruntime","pip install onnxruntime==1.20.1")
+install_if_not_installed("yt-dlp","pip install yt-dlp==2024.11.18")
+install_if_not_installed("groq","pip install groq==0.13.0")
+install_if_not_installed("TTS","pip install TTS==0.21.0")
+
 
 from IPython.display import HTML, Audio
 from base64 import b64decode
