@@ -3,9 +3,9 @@ transformers
 TTS==0.22.0
 pyannote.audio
 speechbrain==1.0.2
-deepface==0.0.93
+deepface
 packaging
-audio-separator
+audio-separator==0.24.1
 onnxruntime
 yt-dlp
 groq
