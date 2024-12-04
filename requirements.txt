@@ -1,11 +1,11 @@
 openai-whisper
 transformers
 TTS==0.22.0
-pyannote.audio
+pyannote.audio==3.3.2
 speechbrain==1.0.2
 deepface
 packaging
-audio-separator==0.24.1
+audio-separator
 onnxruntime
 yt-dlp
 groq
