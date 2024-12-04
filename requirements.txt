@@ -10,6 +10,6 @@ yt-dlp==2024.11.18
 groq==0.13.0 
 pyannote.audio
 deepface
--U numba
+numba
 tiktoken
 packaging==20.9
