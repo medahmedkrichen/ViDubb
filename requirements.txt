@@ -2,8 +2,8 @@ openai-whisper
 transformers
 TTS==0.22.0
 pyannote.audio
-speechbrain
-deepface
+speechbrain==1.0.2
+deepface==0.0.93
 packaging
 audio-separator
 onnxruntime
