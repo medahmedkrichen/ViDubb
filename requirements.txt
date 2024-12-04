@@ -14,5 +14,4 @@ gruut_lang_de==2.0.1
 gruut_lang_fr==2.0.2
 gruut_lang_es==2.0.1
 librosa==0.10.0
-scipy==1.11.4
 umap-learn==0.5.1
