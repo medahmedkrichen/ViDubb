@@ -576,7 +576,17 @@ class VideoDubbing:
         os.system("mkdir outputs")
         os.system("mkdir outputs2")
 
+        natural_scilence = records[0][2]
         previous_silence_time = 0
+        
+        if natural_scilence >= 0.8:
+            previous_silence_time = 0.8
+            natural_scilence -= 0.8
+        else:
+            previous_silence_time = natural_scilence
+            natural_scilence = 0   
+            
+        combined = AudioSegment.silent(duration=natural_scilence*1000) 
 
         for i in range(len(records)):
             print('previous_silence_time: ', previous_silence_time)
@@ -641,9 +651,7 @@ class VideoDubbing:
             print("lt: ", lt)
             
         
-        # Combine Audios
-        
-        combined = AudioSegment.silent(duration=records[0][2]*1000)
+       
         
         # Get all the audio files from the folder
         audio_files = [f for f in os.listdir("outputs2") if f.endswith(('.mp3', '.wav', '.ogg'))]
