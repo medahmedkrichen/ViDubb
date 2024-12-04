@@ -701,18 +701,8 @@ class VideoDubbing:
             subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
         if self.LipSync and self.Voice_denoising:
-            a = !pip install https://raw.githubusercontent.com/AwaleSajil/ghc/master/ghc-1.0-py3-none-any.whl
-            
-            # !pip uninstall tensorflow tensorflow-gpu
-            !cd Wav2Lip && pip install -r requirements.txt
-            
-            #download pretrained model for face detection
-            !wget "https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth" -O "Wav2Lip/face_detection/detection/sfd/s3fd.pth"
-            
-            !pip install -q youtube-dl
-            !pip install ffmpeg-python
-            !pip install librosa==0.9.1
-            
+
+		
             from IPython.display import HTML, Audio
             from base64 import b64decode
             #import numpy as np
@@ -725,20 +715,10 @@ class VideoDubbing:
 
             
 
-            !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../denoised_video.mp4" --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1
+            # !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../denoised_video.mp4" --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1
             
         if self.LipSync and not self.Voice_denoising:
-            a = !pip install https://raw.githubusercontent.com/AwaleSajil/ghc/master/ghc-1.0-py3-none-any.whl
-            
-            # !pip uninstall tensorflow tensorflow-gpu
-            !cd Wav2Lip && pip install -r requirements.txt
-            
-            #download pretrained model for face detection
-            !wget "https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth" -O "Wav2Lip/face_detection/detection/sfd/s3fd.pth"
-            
-            !pip install -q youtube-dl
-            !pip install ffmpeg-python
-            !pip install librosa==0.9.1
+
             
             from IPython.display import HTML, Audio
             from base64 import b64decode
@@ -750,7 +730,7 @@ class VideoDubbing:
             clear_output()
             print("\nDone")
             
-            !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../output_video.mp4" --audio "../combined_audio.wav" --face_det_batch_size 1 --wav2lip_batch_size 1
+            # !cd Wav2Lip && python inference.py --checkpoint_path "wav2lip_gan.pth" --face "../output_video.mp4" --audio "../combined_audio.wav" --face_det_batch_size 1 --wav2lip_batch_size 1
 
 
 def main():
