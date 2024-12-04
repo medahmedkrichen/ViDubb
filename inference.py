@@ -13,7 +13,6 @@ install_if_not_installed('TTS', 'pip install --no-deps TTS==0.21.0')
 install_if_not_installed('packaging', 'pip install packaging==20.9')
 install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
 install_if_not_installed('deepface', 'pip install deepface==0.0.93')
-install_if_not_installed('librosa', 'pip install librosa==0.9.1')
 
 
 
@@ -705,9 +704,11 @@ class VideoDubbing:
             command = f"ffmpeg -i '{self.Video_path}' -i output.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest denoised_video.mp4"
             subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if self.LipSync and self.Voice_denoising:
+            os.system("pip install librosa==0.9.1")
             os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../denoised_video.mp4' --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
             
         if self.LipSync and not self.Voice_denoising:
+            os.system("pip install librosa==0.9.1")
             os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
 def main():
 	if args.yt_url:
