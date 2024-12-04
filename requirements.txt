@@ -32,3 +32,13 @@ pynndescent==0.5.13
 python_crfsuite==0.9.11
 SudachiDict_core
 SudachiPy==0.6.9
+jamo
+g2pkk
+bangla
+bnnumerizer
+bnunicodenormalizer
+dateparser
+gruut-ipa
+python_crfsuite
+pynndescent
+tzlocal
