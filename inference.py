@@ -143,7 +143,7 @@ class VideoDubbing:
             
             
             # Specify the video path and output folder
-            output_folder = 'speaker_images'
+            output_folder = "speakers_image"
             # Call the function
             extract_frames(self.Video_path, output_folder, speakers_rolls)
             
