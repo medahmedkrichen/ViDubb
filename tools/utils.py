@@ -177,3 +177,13 @@ def extract_and_save_most_common_face(folder_path, threshold=0.4):
             
                 print(f"Most common face extracted and saved as {new_image_path}")
                 return new_image_path
+
+def get_overlap(range1, range2):
+            """Calculate the overlap between two ranges."""
+            start1, end1 = range1
+            start2, end2 = range2
+            # Find the maximum of the start times and the minimum of the end times
+            overlap_start = max(start1, start2)
+            overlap_end = min(end1, end2)
+            # Calculate overlap duration
+            return max(0, overlap_end - overlap_start)
