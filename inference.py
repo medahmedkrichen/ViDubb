@@ -168,7 +168,7 @@ class VideoDubbing:
                         image_path = os.path.join(speaker_folder_path, image_name)
             
                         # Detect and crop faces from the image
-                        if not detect_and_crop_faces(image_path):
+                        if not detect_and_crop_faces(image_path, face_cascade):
                             # If no face is detected, delete the image
                             os.remove(image_path)
                             print(f"Deleted {image_path} due to no face detected.")
