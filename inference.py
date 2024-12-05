@@ -80,10 +80,10 @@ class VideoDubbing:
         
         # Load the audio from the video file
         audio = AudioSegment.from_file(self.Video_path, format="mp4")
-        audio.export("test0.wav", format="wav")
+        audio.export("audio/test0.wav", format="wav")
         
         
-        audio_file = "test0.wav"
+        audio_file = "audio/test0.wav"
         
         # Apply the diarization pipeline on the audio file
         diarization = pipeline(audio_file)
@@ -555,9 +555,9 @@ class VideoDubbing:
             end = int(new_record[i][2]) *1000
         
             try:
-                audio[start:end].export("emotions.wav", format="wav")      
-                out_prob, score, index, text_lab = classifier.classify_file("emotions.wav")
-                os.remove("emotions.wav")
+                audio[start:end].export("audio/emotions.wav", format="wav")      
+                out_prob, score, index, text_lab = classifier.classify_file("audio/emotions.wav")
+                os.remove("audio/emotions.wav")
             except:
                 text_lab = ['None']
             
@@ -670,7 +670,7 @@ class VideoDubbing:
         silence = AudioSegment.silent(duration=abs(total_length - records[-1][3])*1000)
         combined += silence
         # Export the combined audio to the output file
-        combined.export("output.wav", format="wav")
+        combined.export("audio/output.wav", format="wav")
                 
         
         # Initialize Spleeter with the 2stems model (vocals + accompaniment)
@@ -683,40 +683,40 @@ class VideoDubbing:
       
         
         
-        audio1 = AudioSegment.from_file("output.wav")
+        audio1 = AudioSegment.from_file("audio/output.wav")
         audio2 = AudioSegment.from_file(output_file_paths)
         combined_audio = audio1.overlay(audio2)
         
         # Export the combined audio file
-        combined_audio.export("combined_audio.wav", format="wav")
+        combined_audio.export("audio/combined_audio.wav", format="wav")
         
         
         # Video and Audio Overlay
         
-        command = f"ffmpeg -i '{self.Video_path}' -i combined_audio.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest output_video.mp4"
+        command = f"ffmpeg -i '{self.Video_path}' -i audio/combined_audio.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest output_video.mp4"
         subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
-	
+	shutil.move(output_file_paths, "audio/")
         clear_output()
         
         
         if self.Voice_denoising:
             
             """model, df_state, _ = init_df()
-            audio, _ = load_audio("combined_audio.wav", sr=df_state.sr())
+            audio, _ = load_audio("audio/combined_audio.wav", sr=df_state.sr())
             # Denoise the audio
             enhanced = enhance(model, df_state, audio)
             # Save for listening
-            save_audio("enhanced.wav", enhanced, df_state.sr())"""
-            command = f"ffmpeg -i '{self.Video_path}' -i output.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest denoised_video.mp4"
+            save_audio("audio/enhanced.wav", enhanced, df_state.sr())"""
+            command = f"ffmpeg -i '{self.Video_path}' -i audio/output.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest denoised_video.mp4"
             subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if self.LipSync and self.Voice_denoising:
             os.system("pip install librosa==0.9.1")
-            os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../denoised_video.mp4' --audio '../output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
+            os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../denoised_video.mp4' --audio '../audio/output.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
             
         if self.LipSync and not self.Voice_denoising:
             os.system("pip install librosa==0.9.1")
-            os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
+            os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../audio/combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
 
 			 
         if  self.LipSync and self.Voice_denoising:
