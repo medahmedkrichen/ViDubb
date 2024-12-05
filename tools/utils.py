@@ -95,7 +95,7 @@ def extract_frames(video_path, output_folder, periods, num_frames=50):
                 video.release()
 
 
-def detect_and_crop_faces(image_path):
+def detect_and_crop_faces(image_path, face_cascade):
                 img = cv2.imread(image_path)
                 
                 if img is None:
