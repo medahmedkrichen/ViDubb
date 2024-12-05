@@ -725,7 +725,7 @@ class VideoDubbing:
 
             shutil.move(source_path, destination_folder)
             os.remove('output_video.mp4')
-	elif self.LipSync and not self.Voice_denoising:
+        elif self.LipSync and not self.Voice_denoising:
             source_path = 'Wav2Lip/results/result_voice.mp4'
             destination_folder = 'results'
 
