@@ -599,15 +599,6 @@ def main():
 	if not video_path:
 		video_path = args.video_url
 	
-	print(args.yt_url)
-	print(args.video_url)
-	print(args.source_language)
-	print(args.target_language)
-	print(args.LipSync)
-	print(args.Bg_sound)
-	print('##########')
-	print(os.getenv('HF_TOKEN'))
-	# print(os.getenv('Groq_TOKEN'))
 	vidubb = VideoDubbing(video_path, args.source_language, args.target_language, args.LipSync, not args.Bg_sound, "", os.getenv('HF_TOKEN'))
 	
 if __name__ == '__main__':
