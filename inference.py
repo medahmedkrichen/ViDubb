@@ -247,7 +247,7 @@ class VideoDubbing:
                 return True
             
             # Path to the folder containing speaker images
-            speaker_images_folder = "speaker_images"
+            speaker_images_folder = "speakers_image"
             
             # Iterate through speaker subfolders
             for speaker_folder in os.listdir(speaker_images_folder):
@@ -326,7 +326,7 @@ class VideoDubbing:
                 print(f"Most common face extracted and saved as {new_image_path}")
                 return new_image_path
             
-            speaker_images_folder = "speaker_images"
+            speaker_images_folder = "speakers_image"
             for speaker_folder in os.listdir(speaker_images_folder):
                 speaker_folder_path = os.path.join(speaker_images_folder, speaker_folder)
             
@@ -356,7 +356,7 @@ class VideoDubbing:
             
             if os.path.exists("Wav2Lip/speaker_images"):
                 shutil.rmtree("Wav2Lip/speaker_images")
-            shutil.copytree("speaker_images", "Wav2Lip/speaker_images")
+            shutil.copytree("speakers_image", "Wav2Lip/speaker_images")
             
 
             
@@ -378,7 +378,7 @@ class VideoDubbing:
                     speaker_audio += audio[start:end]
                     
         
-            speaker_audio.export(f"speakers/{speaker}.wav", format="wav")
+            speaker_audio.export(f"speakers_audio/{speaker}.wav", format="wav")
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
@@ -591,7 +591,7 @@ class VideoDubbing:
             print('previous_silence_time: ', previous_silence_time)
             tts.tts_to_file(text=records[i][0],
                         file_path=f"audio_chunks/{i}.wav",
-                        speaker_wav=f"speakers/{records[i][4]}.wav",
+                        speaker_wav=f"speakers_audio/{records[i][4]}.wav",
                         language=self.target_language,
                         emotion=records[i][5],
                         speed=1
