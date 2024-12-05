@@ -152,8 +152,8 @@ class VideoDubbing:
                 frame_per_speaker.append(frame_speaker)
                 # print(time)
             
-            os.system("rm -r speaker_images")
-            os.system("mkdir speaker_images")
+            os.system("rm -r speakers_image")
+            os.system("mkdir speakers_image")
             
             def extract_frames(video_path, output_folder, periods, num_frames=50):
                 # Open the video file
@@ -354,9 +354,9 @@ class VideoDubbing:
             shutil.copyfile('frame_per_speaker.json', "Wav2Lip/frame_per_speaker.json")
             
             
-            if os.path.exists("Wav2Lip/speaker_images"):
-                shutil.rmtree("Wav2Lip/speaker_images")
-            shutil.copytree("speakers_image", "Wav2Lip/speaker_images")
+            if os.path.exists("Wav2Lip/speakers_image"):
+                shutil.rmtree("Wav2Lip/speakers_image")
+            shutil.copytree("speakers_image", "Wav2Lip/speakers_image")
             
 
             
