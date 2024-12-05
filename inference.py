@@ -56,46 +56,8 @@ parser.add_argument('--Bg_sound', type=bool, help='Keep the background sound of 
 
 
 args = parser.parse_args()
-class VideoDubbing:
-    def __init__(self, Video_path, source_language, target_language, 
-                 LipSync=True, Voice_denoising = True, 
-                 Context_translation = "API code here", huggingface_auth_token="API code here"):
-        
-        self.Video_path = Video_path
-        self.source_language = source_language
-        self.target_language = target_language
-        self.LipSync = LipSync
-        self.Voice_denoising = Voice_denoising
-        self.Context_translation = Context_translation
-        self.huggingface_auth_token = huggingface_auth_token
-        
-        # Speaker Diarization
 
-        
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        
-        # Initialize the pre-trained speaker diarization pipeline
-        pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization",
-                                     use_auth_token=self.huggingface_auth_token).to(device)
-        
-        # Load the audio from the video file
-        audio = AudioSegment.from_file(self.Video_path, format="mp4")
-        audio.export("audio/test0.wav", format="wav")
-        
-        
-        audio_file = "audio/test0.wav"
-        
-        # Apply the diarization pipeline on the audio file
-        diarization = pipeline(audio_file)
-        speakers_rolls ={}
-        
-        # Print the diarization results
-        for speech_turn, _, speaker in diarization.itertracks(yield_label=True):
-            print(f"Speaker {speaker}: from {speech_turn.start}s to {speech_turn.end}s")
-            speakers_rolls[(speech_turn.start, speech_turn.end)] = speaker
-        
-        
-        def merge_overlapping_periods(period_dict):
+def merge_overlapping_periods(period_dict):
             # Sort periods by start time
             sorted_periods = sorted(period_dict.items(), key=lambda x: x[0][0])
             
@@ -122,40 +84,15 @@ class VideoDubbing:
             
             # Convert back to dictionary
             return dict(merged_periods)
-        
-        speakers_rolls = merge_overlapping_periods(speakers_rolls)
-
-        if self.LipSync:
-            # Load the video file
-            video = cv2.VideoCapture(self.Video_path)
-            
-            # Get frames per second (FPS)
-            fps = video.get(cv2.CAP_PROP_FPS)
-            
-            # Get total number of frames
-            total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
-            
-            video.release()
-            
-            
-            def get_speaker(time_frame, speaker_dict):
+	
+def get_speaker(time_frame, speaker_dict):
                 for (start, end), speaker in speaker_dict.items():
                     if start <= time_frame <= end:
                         return speaker
                 return None
-            
-            frame_per_speaker = []
-            
-            for i in range(total_frames):
-                time = i/round(fps)
-                frame_speaker = get_speaker(time, speakers_rolls)
-                frame_per_speaker.append(frame_speaker)
-                # print(time)
-            
-            os.system("rm -r speakers_image")
-            os.system("mkdir speakers_image")
-            
-            def extract_frames(video_path, output_folder, periods, num_frames=50):
+
+
+def extract_frames(video_path, output_folder, periods, num_frames=50):
                 # Open the video file
                 video = cv2.VideoCapture(video_path)
                 
@@ -208,20 +145,9 @@ class VideoDubbing:
             
                 # Release the video capture object
                 video.release()
-            
-            # Specify the video path and output folder
-            output_folder = 'speaker_images'
-            # Call the function
-            extract_frames(self.Video_path, output_folder, speakers_rolls)
-            
-            # Initialize the MTCNN face detector
-            haar_cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
-            
-            # Load the pre-trained Haar Cascade model for face detection
-            face_cascade = cv2.CascadeClassifier(haar_cascade_path)
-            
-            # Function to detect and crop faces
-            def detect_and_crop_faces(image_path):
+
+
+def detect_and_crop_faces(image_path):
                 img = cv2.imread(image_path)
                 
                 if img is None:
@@ -245,37 +171,15 @@ class VideoDubbing:
                 # Replace the original image with the cropped face
                 cv2.imwrite(image_path, face)
                 return True
-            
-            # Path to the folder containing speaker images
-            speaker_images_folder = "speakers_image"
-            
-            # Iterate through speaker subfolders
-            for speaker_folder in os.listdir(speaker_images_folder):
-                speaker_folder_path = os.path.join(speaker_images_folder, speaker_folder)
-            
-                if os.path.isdir(speaker_folder_path):
-                    # Process each image in the speaker folder
-                    for image_name in os.listdir(speaker_folder_path):
-                        image_path = os.path.join(speaker_folder_path, image_name)
-            
-                        # Detect and crop faces from the image
-                        if not detect_and_crop_faces(image_path):
-                            # If no face is detected, delete the image
-                            os.remove(image_path)
-                            print(f"Deleted {image_path} due to no face detected.")
-                        else:
-                            print(f"Face detected and cropped: {image_path}")
-            
-            
-            
-            # Step 2: Compare face embeddings with a threshold for similarity
-            def cosine_similarity(embedding1, embedding2):
+
+def cosine_similarity(embedding1, embedding2):
                 """Calculate cosine similarity between two face embeddings"""
                 embedding1 = np.array(embedding1)
                 embedding2 = np.array(embedding2)
                 return np.dot(embedding1, embedding2) / (np.linalg.norm(embedding1) * np.linalg.norm(embedding2))
-            
-            def extract_and_save_most_common_face(folder_path, threshold=0.4):
+
+
+def extract_and_save_most_common_face(folder_path, threshold=0.4):
                 """
                 Extracts and saves the most common face from the folder, saving it as 'max_image.jpg'.
                 """
@@ -325,6 +229,124 @@ class VideoDubbing:
             
                 print(f"Most common face extracted and saved as {new_image_path}")
                 return new_image_path
+
+def get_overlap(range1, range2):
+            """Calculate the overlap between two ranges."""
+            start1, end1 = range1
+            start2, end2 = range2
+            # Find the maximum of the start times and the minimum of the end times
+            overlap_start = max(start1, start2)
+            overlap_end = min(end1, end2)
+            # Calculate overlap duration
+            return max(0, overlap_end - overlap_start)
+
+
+class VideoDubbing:
+    def __init__(self, Video_path, source_language, target_language, 
+                 LipSync=True, Voice_denoising = True, 
+                 Context_translation = "API code here", huggingface_auth_token="API code here"):
+        
+        self.Video_path = Video_path
+        self.source_language = source_language
+        self.target_language = target_language
+        self.LipSync = LipSync
+        self.Voice_denoising = Voice_denoising
+        self.Context_translation = Context_translation
+        self.huggingface_auth_token = huggingface_auth_token
+        
+        # Speaker Diarization
+
+        
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        
+        # Initialize the pre-trained speaker diarization pipeline
+        pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization",
+                                     use_auth_token=self.huggingface_auth_token).to(device)
+        
+        # Load the audio from the video file
+        audio = AudioSegment.from_file(self.Video_path, format="mp4")
+        audio.export("audio/test0.wav", format="wav")
+        
+        
+        audio_file = "audio/test0.wav"
+        
+        # Apply the diarization pipeline on the audio file
+        diarization = pipeline(audio_file)
+        speakers_rolls ={}
+        
+        # Print the diarization results
+        for speech_turn, _, speaker in diarization.itertracks(yield_label=True):
+            print(f"Speaker {speaker}: from {speech_turn.start}s to {speech_turn.end}s")
+            speakers_rolls[(speech_turn.start, speech_turn.end)] = speaker
+        
+        
+        
+        
+        speakers_rolls = merge_overlapping_periods(speakers_rolls)
+
+        if self.LipSync:
+            # Load the video file
+            video = cv2.VideoCapture(self.Video_path)
+            
+            # Get frames per second (FPS)
+            fps = video.get(cv2.CAP_PROP_FPS)
+            
+            # Get total number of frames
+            total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+            
+            video.release()
+            
+            
+            
+            
+            frame_per_speaker = []
+            
+            for i in range(total_frames):
+                time = i/round(fps)
+                frame_speaker = get_speaker(time, speakers_rolls)
+                frame_per_speaker.append(frame_speaker)
+                # print(time)
+            
+            os.system("rm -r speakers_image")
+            os.system("mkdir speakers_image")
+            
+            
+            
+            # Specify the video path and output folder
+            output_folder = 'speaker_images'
+            # Call the function
+            extract_frames(self.Video_path, output_folder, speakers_rolls)
+            
+            # Initialize the MTCNN face detector
+            haar_cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
+            
+            # Load the pre-trained Haar Cascade model for face detection
+            face_cascade = cv2.CascadeClassifier(haar_cascade_path)
+            
+            # Function to detect and crop faces
+            
+            # Path to the folder containing speaker images
+            speaker_images_folder = "speakers_image"
+            
+            # Iterate through speaker subfolders
+            for speaker_folder in os.listdir(speaker_images_folder):
+                speaker_folder_path = os.path.join(speaker_images_folder, speaker_folder)
+            
+                if os.path.isdir(speaker_folder_path):
+                    # Process each image in the speaker folder
+                    for image_name in os.listdir(speaker_folder_path):
+                        image_path = os.path.join(speaker_folder_path, image_name)
+            
+                        # Detect and crop faces from the image
+                        if not detect_and_crop_faces(image_path):
+                            # If no face is detected, delete the image
+                            os.remove(image_path)
+                            print(f"Deleted {image_path} due to no face detected.")
+                        else:
+                            print(f"Face detected and cropped: {image_path}")
+            
+            
+        
             
             speaker_images_folder = "speakers_image"
             for speaker_folder in os.listdir(speaker_images_folder):
@@ -457,15 +479,6 @@ class VideoDubbing:
                         'sad' : 'Sad',
                         'None': None}
     
-        def get_overlap(range1, range2):
-            """Calculate the overlap between two ranges."""
-            start1, end1 = range1
-            start2, end2 = range2
-            # Find the maximum of the start times and the minimum of the end times
-            overlap_start = max(start1, start2)
-            overlap_end = min(end1, end2)
-            # Calculate overlap duration
-            return max(0, overlap_end - overlap_start)
 
 
          # 
