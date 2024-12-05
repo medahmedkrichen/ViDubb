@@ -696,7 +696,7 @@ class VideoDubbing:
         command = f"ffmpeg -i '{self.Video_path}' -i audio/combined_audio.wav -c:v copy -map 0:v:0 -map 1:a:0 -shortest output_video.mp4"
         subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
-	shutil.move(output_file_paths, "audio/")
+        shutil.move(output_file_paths, "audio/")
         clear_output()
         
         
