@@ -570,10 +570,10 @@ class VideoDubbing:
         tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=True)
         #!tts --model_name "tts_models/multilingual/multi-dataset/xtts_v2"  --list_speaker_idxs
         
-        os.system("rm -r outputs")
-        os.system("rm -r outputs2")
-        os.system("mkdir outputs")
-        os.system("mkdir outputs2")
+        os.system("rm -r audio_chunks")
+        os.system("rm -r su_audio_chunks")
+        os.system("mkdir audio_chunks")
+        os.system("mkdir su_audio_chunks")
 
         natural_scilence = records[0][2]
         previous_silence_time = 0
@@ -590,20 +590,20 @@ class VideoDubbing:
         for i in range(len(records)):
             print('previous_silence_time: ', previous_silence_time)
             tts.tts_to_file(text=records[i][0],
-                        file_path=f"outputs/{i}.wav",
+                        file_path=f"audio_chunks/{i}.wav",
                         speaker_wav=f"speakers/{records[i][4]}.wav",
                         language=self.target_language,
                         emotion=records[i][5],
                         speed=1
                         )
             
-            audio = AudioSegment.from_file(f"outputs/{i}.wav")
+            audio = AudioSegment.from_file(f"audio_chunks/{i}.wav")
             lt = len(audio) / 1000.0 
             lo =  max(records[i][3] - records[i][2], 0)
             theta = lo/lt
           
-            input_file = f"outputs/{i}.wav"
-            output_file = f"outputs2/{i}.wav"
+            input_file = f"audio_chunks/{i}.wav"
+            output_file = f"su_audio_chunks/{i}.wav"
 
            
             if theta <1 and theta > 0.44:
@@ -653,14 +653,14 @@ class VideoDubbing:
        
         
         # Get all the audio files from the folder
-        audio_files = [f for f in os.listdir("outputs2") if f.endswith(('.mp3', '.wav', '.ogg'))]
+        audio_files = [f for f in os.listdir("su_audio_chunks") if f.endswith(('.mp3', '.wav', '.ogg'))]
         
         # Sort files to concatenate them in order, if necessary
         audio_files.sort(key=lambda x: int(x.split('.')[0]))  # Modify sorting logic if needed (e.g., based on filenames)
         
         # Loop through and concatenate each audio file
         for audio_file in audio_files:
-            file_path = os.path.join("outputs2", audio_file)
+            file_path = os.path.join("su_audio_chunks", audio_file)
             audio_segment = AudioSegment.from_file(file_path)
             combined += audio_segment  # Append audio to the combined segment
         
