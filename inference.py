@@ -112,7 +112,7 @@ class VideoDubbing:
         
         
         
-        speakers_rolls = merge_overlapping_periods(speakers_rolls)
+        # speakers_rolls = merge_overlapping_periods(speakers_rolls)
 
         if self.LipSync:
             # Load the video file
