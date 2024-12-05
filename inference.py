@@ -37,7 +37,7 @@ import ffmpeg
 from IPython.display import clear_output 
 import sys, argparse
 from dotenv import load_dotenv
-
+from ascii_magic import AsciiArt
 from tools.utils import merge_overlapping_periods
 from tools.utils import get_speaker
 from tools.utils import extract_frames
@@ -46,7 +46,8 @@ from tools.utils import cosine_similarity
 from tools.utils import extract_and_save_most_common_face
 from tools.utils import get_overlap
 
-
+my_art = AsciiArt.from_image('Vidubb_without_bg.png')
+my_art.to_terminal()
 
 
 load_dotenv()
