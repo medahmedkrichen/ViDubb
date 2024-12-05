@@ -717,20 +717,20 @@ class VideoDubbing:
         if self.LipSync and not self.Voice_denoising:
             os.system("pip install librosa==0.9.1")
             os.system("cd Wav2Lip && python inference.py --checkpoint_path 'wav2lip_gan.pth' --face '../output_video.mp4' --audio '../combined_audio.wav' --face_det_batch_size 1 --wav2lip_batch_size 1")
-       
-	
-	if  self.LipSync:
+
+			 
+        if  self.LipSync:
             source_path = 'Wav2Lip/results/result_voice.mp4'
             destination_folder = 'results'
 
             shutil.move(source_path, destination_folder)
-	elif not self.LipSync and self.Voice_denoising:
+        elif not self.LipSync and self.Voice_denoising:
             source_path = 'denoised_video.mp4'
             destination_folder = 'results'
 
             shutil.move(source_path, destination_folder)
             os.remove('output_video.mp4')
-	else:
+        else:
             source_path = 'output_video.mp4'
             destination_folder = 'results'
 
