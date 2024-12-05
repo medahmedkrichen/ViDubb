@@ -3,6 +3,7 @@ import json
 import re
 import os
 import importlib.util
+from deepface import DeepFace
 
 
 def merge_overlapping_periods(period_dict):
@@ -127,7 +128,7 @@ def cosine_similarity(embedding1, embedding2):
                 return np.dot(embedding1, embedding2) / (np.linalg.norm(embedding1) * np.linalg.norm(embedding2))
 
 
-def extract_and_save_most_common_face(folder_path, threshold=0.4):
+def extract_and_save_most_common_face(folder_path, threshold=0.3):
                 """
                 Extracts and saves the most common face from the folder, saving it as 'max_image.jpg'.
                 """
