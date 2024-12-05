@@ -592,6 +592,7 @@ class VideoDubbing:
 		
 
 def main():
+	video_path = None
 	if args.yt_url:
 		os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {args.yt_url}")
 		video_path = "video_path.mp4"
