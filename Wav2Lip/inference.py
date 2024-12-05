@@ -107,7 +107,7 @@ def face_detect(images):
 							embedding2 = np.array(embedding2)
 							
 							best_socre = 0
-							for speaker in os.listdir("speaker_images"):
+							for speaker in os.listdir("speakers_image"):
 								if cosine_similarity(f"speakers_image/{speaker}/max_image.jpg", embedding2)  > best_socre:
 									best_socre = cosine_similarity(f"speakers_image/{speaker}/max_image.jpg", embedding2) 
 									speaking_speaker = speaker
