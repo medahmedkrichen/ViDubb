@@ -362,8 +362,8 @@ class VideoDubbing:
             
         ###############################################################################
         
-        os.system("rm -r speakers")
-        os.system("mkdir speakers")
+        os.system("rm -r speakers_audio")
+        os.system("mkdir speakers_audio")
         
         speakers = set(list(speakers_rolls.values()))
         audio = AudioSegment.from_file(audio_file, format="mp4")
