@@ -38,13 +38,13 @@ from IPython.display import clear_output
 import sys, argparse
 from dotenv import load_dotenv
 
-from toos.utils import merge_overlapping_periods
-from toos.utils import get_speaker
-from toos.utils import extract_frames
-from toos.utils import detect_and_crop_faces
-from toos.utils import cosine_similarity
-from toos.utils import extract_and_save_most_common_face
-from toos.utils import get_overlap
+from tools.utils import merge_overlapping_periods
+from tools.utils import get_speaker
+from tools.utils import extract_frames
+from tools.utils import detect_and_crop_faces
+from tools.utils import cosine_similarity
+from tools.utils import extract_and_save_most_common_face
+from tools.utils import get_overlap
 
 
 
