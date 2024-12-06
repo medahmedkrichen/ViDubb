@@ -526,7 +526,7 @@ class VideoDubbing:
         separator = Separator()
 
         # Load a model
-        separator.load_model(model_filename='1_HP-UVR.pth')
+        separator.load_model(model_filename='2_HP-UVR.pth')
         output_file_paths = separator.separate(self.Video_path)[0]
 
       
