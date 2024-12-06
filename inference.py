@@ -237,7 +237,7 @@ class VideoDubbing:
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
-        model = whisper.load_model("large-v3", device=device)
+        model = whisper.load_model("turbo", device=device)
         transcript = model.transcribe(
             word_timestamps=True,
             audio=self.Video_path,
