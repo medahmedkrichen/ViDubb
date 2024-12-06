@@ -304,7 +304,7 @@ class VideoDubbing:
         
         # Audio Emotions Analysis
         
-        classifier = foreign_class(source="speechbrain/emotion-recognition-wav2vec2-IEMOCAP", pymodule_file="custom_interface.py", classname="CustomEncoderWav2vec2Classifier", run_opts={"device":"cuda"})
+        classifier = foreign_class(source="speechbrain/emotion-recognition-wav2vec2-IEMOCAP", pymodule_file="custom_interface.py", classname="CustomEncoderWav2vec2Classifier", run_opts={"device":f"{device}"})
         
         emotion_dict = {'neu': 'Neutral',
                         'ang' : 'Angry',
