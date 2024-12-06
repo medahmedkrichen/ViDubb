@@ -12,7 +12,8 @@ def install_if_not_installed(import_name, install_command):
         __import__(import_name)
     except ImportError:
         os.system(f"{install_command} > /dev/null 2>&1")
-	    
+
+install_if_not_installed('protobuf', 'pip install protobuf==3.19.6')
 install_if_not_installed('TTS', 'pip install --no-deps TTS==0.21.0')
 install_if_not_installed('packaging', 'pip install packaging==20.9')
 install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
