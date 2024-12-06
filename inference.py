@@ -413,7 +413,10 @@ class VideoDubbing:
         
         
         os.environ["COQUI_TOS_AGREED"] = "1"
-        tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=True)
+        if device == "cuda":
+                tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=True)
+	else:
+                tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
         #!tts --model_name "tts_models/multilingual/multi-dataset/xtts_v2"  --list_speaker_idxs
         
         os.system("rm -r audio_chunks")
