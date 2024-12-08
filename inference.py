@@ -109,8 +109,9 @@ class VideoDubbing:
         
         # Print the diarization results
         for speech_turn, _, speaker in diarization.itertracks(yield_label=True):
-            print(f"Speaker {speaker}: from {speech_turn.start}s to {speech_turn.end}s")
-            speakers_rolls[(speech_turn.start, speech_turn.end)] = speaker
+	    for abs(speech_turn.end - speech_turn.start) > 1.5:
+                print(f"Speaker {speaker}: from {speech_turn.start}s to {speech_turn.end}s")
+                speakers_rolls[(speech_turn.start, speech_turn.end)] = speaker
         
         
         
