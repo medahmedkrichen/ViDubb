@@ -45,6 +45,7 @@ import ffmpeg
 from IPython.display import clear_output 
 import sys, argparse
 from dotenv import load_dotenv
+import warnings
 from tools.utils import merge_overlapping_periods
 from tools.utils import get_speaker
 from tools.utils import extract_frames
@@ -54,7 +55,7 @@ from tools.utils import extract_and_save_most_common_face
 from tools.utils import get_overlap
 
 
-
+warnings.filterwarnings("ignore")
 load_dotenv()
 
 parser = argparse.ArgumentParser(description='Choose between YouTube or video URL')
@@ -459,7 +460,6 @@ class VideoDubbing:
 
            
             if theta <1 and theta > 0.44:
-                print('############################')
                 theta_prim = (lo+previous_silence_time)/lt
                 command = f"ffmpeg -i {input_file} -filter:a 'atempo={1/theta_prim}' -vn {output_file}"
                 process = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
