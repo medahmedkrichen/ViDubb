@@ -86,7 +86,7 @@ def face_detect(images):
 		predictions = []
 		pady1, pady2, padx1, padx2 = args.pads
 		try:
-			speaking_speaker = "SPEAKER_00"
+			speaking_speaker = "NoOne"
 			for i in tqdm(range(0, len(images), batch_size)):
 				rect = detector.get_detections_for_batch(np.array(images[i:i + batch_size]))
 				if rect[0] is None:
