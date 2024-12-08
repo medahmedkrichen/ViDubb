@@ -65,6 +65,7 @@ group.add_argument('--video_url', type=str, help='Single video URL')
 
 parser.add_argument('--source_language', type=str, help='Video source language', required=True)
 parser.add_argument('--target_language', type=str, help='Video target language', required=True)
+parser.add_argument('--whisper_model', type=str, help='Chose the whisper model based on your device requirements', default="turbo")
 parser.add_argument('--LipSync', type=bool, help='Lip synchronization of the resut audio to the synthesized video', default=False)
 parser.add_argument('--Bg_sound', type=bool, help='Keep the background sound of the original video, though it might be slightly noisy', default=False)
 
@@ -76,7 +77,7 @@ args = parser.parse_args()
 
 class VideoDubbing:
     def __init__(self, Video_path, source_language, target_language, 
-                 LipSync=True, Voice_denoising = True, 
+                 LipSync=True, Voice_denoising = True, whisper_model="turbo",
                  Context_translation = "API code here", huggingface_auth_token="API code here"):
         
         self.Video_path = Video_path
@@ -84,6 +85,7 @@ class VideoDubbing:
         self.target_language = target_language
         self.LipSync = LipSync
         self.Voice_denoising = Voice_denoising
+        self.whisper_model = whisper_model
         self.Context_translation = Context_translation
         self.huggingface_auth_token = huggingface_auth_token
         
@@ -238,7 +240,7 @@ class VideoDubbing:
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
-        model = whisper.load_model("turbo", device=device)
+        model = whisper.load_model(self.whisper_model, device=device)
         transcript = model.transcribe(
             word_timestamps=True,
             audio=self.Video_path,
@@ -607,7 +609,7 @@ def main():
 	if not video_path:
 		video_path = args.video_url
 	
-	vidubb = VideoDubbing(video_path, args.source_language, args.target_language, args.LipSync, not args.Bg_sound, "", os.getenv('HF_TOKEN'))
+	vidubb = VideoDubbing(video_path, args.source_language, args.target_language, args.LipSync, not args.Bg_sound, args.whisper_model, os.getenv('Groq_TOKEN '), os.getenv('HF_TOKEN'))
 	
 if __name__ == '__main__':
 	main()
