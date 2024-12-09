@@ -445,22 +445,22 @@ class VideoDubbing:
         for i in range(len(records)):
             print('previous_silence_time: ', previous_silence_time)
             tts.tts_to_file(text=records[i][0],
-                        file_path=f"outputs/{i}.wav",
-                        speaker_wav=f"speakers/{records[i][4]}.wav",
+                        file_path=f"audio_chunks/{i}.wav",
+                        speaker_wav=f"speakers_audio/{records[i][4]}.wav",
                         language=self.target_language,
                         emotion=records[i][5],
                         speed=2)
             
-            audio = AudioSegment.from_file(f"outputs/{i}.wav")
+            audio = AudioSegment.from_file(f"audio_chunks/{i}.wav")
             audio = audio[:len(audio)-tip]
-            audio.export(f"outputs/{i}.wav", format="wav")
+            audio.export(f"audio_chunks/{i}.wav", format="wav")
             
             lt = len(audio) / 1000.0 
             lo =  max(records[i][3] - records[i][2], 0)
             theta = lo/lt
           
-            input_file = f"outputs/{i}.wav"
-            output_file = f"outputs2/{i}.wav"
+            input_file = f"audio_chunks/{i}.wav"
+            output_file = f"su_audio_chunks/{i}.wav"
 
            
             if theta <1 and theta > 0.44:
