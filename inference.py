@@ -45,6 +45,8 @@ import ffmpeg
 from IPython.display import clear_output 
 import sys, argparse
 from dotenv import load_dotenv
+import nltk
+from nltk.tokenize import sent_tokenize
 import warnings
 from tools.utils import merge_overlapping_periods
 from tools.utils import get_speaker
@@ -54,7 +56,8 @@ from tools.utils import cosine_similarity
 from tools.utils import extract_and_save_most_common_face
 from tools.utils import get_overlap
 
-
+        
+nltk.download('punkt')
 warnings.filterwarnings("ignore")
 load_dotenv()
 
@@ -246,16 +249,66 @@ class VideoDubbing:
             word_timestamps=True,
             audio=self.Video_path,
           )
+			 
+        time_stamped = []
+        full_text = []
         for segment in transcript['segments']:
-            print(''.join(f"{word['word']}[{word['start']}/{word['end']}]"
-                            for word in segment['words']))
+            for word in segment['words']:
+                time_stamped.append([word['word'],word['start'],word['end']])
+                full_text.append(word['word'])
+        full_text = "".join(full_text)
+       
+        # Decompose Long Sentences
+
+        
+        
+        # Tokenize the text into sentences
+        tokenized_sentences = sent_tokenize(full_text)
+        sentences = []
+        
+        # Print the sentences
+        for i, sentence in enumerate(tokenized_sentences):
+            sentences.append(sentence)
+
+        
+        time_stamped_sentances = {}
+        count_sentances = {}
+        
+        letter = 0
+        for i in range(len(sentences)):
+            tmp = []
+            starts = []
+            
+            for j in range(len(sentences[i])):
+                letter += 1
+                tmp.append(sentences[i][j])
+                
+                f = 0
+                for k in range(len(time_stamped)):
+                    for m in range(len(time_stamped[k][0])):
+                        f += 1
+                        
+                        if f == letter:
+        
+                            starts.append(time_stamped[k][1])
+                       
+                            starts.append(time_stamped[k][2])
+            letter += 1               
+                            
+            time_stamped_sentances["".join(tmp)] = [min(starts), max(starts)]
+            count_sentances[i+1] = "".join(tmp)
+
+        record = []
+        print(time_stamped_sentances)
+        for sentence in time_stamped_sentances:
+            record.append([sentence, time_stamped_sentances[sentence][0], time_stamped_sentances[sentence][1]])
         
        
         
        
         # Decompose Long Sentences
         
-        record = []
+        """record = []
         for segment in transcript['segments']:
             print("#############################")
             sentance = []
@@ -302,7 +355,7 @@ class VideoDubbing:
                 new_record.append([text, start, end])
             else:
                 new_record.append(record[i])
-            i += 1
+            i += 1"""
         
         new_record = record
         
