@@ -440,7 +440,7 @@ class VideoDubbing:
             
         combined = AudioSegment.silent(duration=natural_scilence*1000) 
 
-        tip = 300
+        tip = 350
         
         for i in range(len(records)):
             print('previous_silence_time: ', previous_silence_time)
