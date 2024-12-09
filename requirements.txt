@@ -47,4 +47,5 @@ tensorflow==2.8.0rc0
 jieba
 grpcio-status==1.33.2 
 scikit-image
+nltk==3.2.4
 gradio==5.8.0
