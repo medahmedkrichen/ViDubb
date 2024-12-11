@@ -511,6 +511,7 @@ class VideoDubbing:
             audio = AudioSegment.from_file(f"audio_chunks/{i}.wav")
             audio = audio[:len(audio)-tip]
             audio.export(f"audio_chunks/{i}.wav", format="wav")
+            del audio
             
             lt = len(audio) / 1000.0 
             lo =  max(records[i][3] - records[i][2], 0)
