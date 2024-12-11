@@ -509,8 +509,8 @@ class VideoDubbing:
                         speed=2)
             
             audio = AudioSegment.from_file(f"audio_chunks/{i}.wav")
-            """audio = audio[:len(audio)-tip]
-            audio.export(f"audio_chunks/{i}.wav", format="wav")"""
+            audio = audio[:len(audio)-tip]
+            audio.export(f"audio_chunks/{i}.wav", format="wav")
             
             
             lt = len(audio) / 1000.0 
