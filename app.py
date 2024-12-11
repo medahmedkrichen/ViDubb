@@ -673,32 +673,36 @@ language_mapping = {
 
 
 def process_video(video, source_language, target_language, use_wav2lip, whisper_model, bg_sound):
-    os.system("rm video_path.mp4")
-    video_path = None
-    if "youtube.com" in video:
-        os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {video}")
-        video_path = "video_path.mp4"
+    try:
+        os.system("rm video_path.mp4")
+        video_path = None
+        if "youtube.com" in video:
+            os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {video}")
+            video_path = "video_path.mp4"
 
-    else:
-        video_path = video
-	
-    vidubb = VideoDubbing(video_path, language_mapping[source_language], language_mapping[target_language], use_wav2lip, not bg_sound, whisper_model, "", os.getenv('HF_TOKEN'))
-    if  use_wav2lip and not bg_sound:
-        source_path = 'results/result_voice.mp4'
-            
+        else:
+            video_path = video
+        
+        vidubb = VideoDubbing(video_path, language_mapping[source_language], language_mapping[target_language], use_wav2lip, not bg_sound, whisper_model, "", os.getenv('HF_TOKEN'))
+        if  use_wav2lip and not bg_sound:
+            source_path = 'results/result_voice.mp4'
+                
 
-    elif use_wav2lip and bg_sound:
-        source_path = 'results/result_voice.mp4'
+        elif use_wav2lip and bg_sound:
+            source_path = 'results/result_voice.mp4'
 
-    
-    elif not use_wav2lip and not bg_sound:
-        source_path = 'results/denoised_video.mp4'
+        
+        elif not use_wav2lip and not bg_sound:
+            source_path = 'results/denoised_video.mp4'
 
-    else:
-        source_path = 'results/output_video.mp4'
-    
-    
-    return source_path, "No Error"
+        else:
+            source_path = 'results/output_video.mp4'
+        
+        return source_path, "No Error"
+
+    except Exception as e:
+        print(f"Error in process_video: {str(e)}")
+        return None, f"Error: {str(e)}"
 
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
@@ -707,7 +711,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     
     with gr.Row():
         with gr.Column(scale=2):
-                video = gr.Video(label="Upload Video (Optional)")
+                video = gr.Video(label="Upload Video (Optional)",height=500, width=500)
                 video = gr.Textbox(label="YouTube URL (Optional)", placeholder="Enter YouTube URL")
                 source_language = gr.Dropdown(
                     choices=list(language_mapping.keys()),  # You can use `language_mapping.keys()` here
