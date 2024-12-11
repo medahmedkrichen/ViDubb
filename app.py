@@ -702,8 +702,8 @@ def process_video(video, source_language, target_language, use_wav2lip, whisper_
 
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# ViDubbing")
-    gr.Markdown("This tool uses AI to dub videos into different languages. Upload a video, choose a target language, and get a dubbed version!")
+    gr.Markdown("# ViDubb")
+    gr.Markdown("This tool uses AI to dub videos into different languages!")
     
     with gr.Row():
         with gr.Column(scale=2):
@@ -747,11 +747,6 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         outputs=[output_video, error_message]
     )
 
-    gr.Markdown("""
-    ## Notes:
-    -
-    
-    """)
 
   
 
