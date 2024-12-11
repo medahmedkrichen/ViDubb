@@ -93,9 +93,13 @@ class VideoDubbing:
         self.Context_translation = Context_translation
         self.huggingface_auth_token = huggingface_auth_token
         
-        # Speaker Diarization
 
-        
+        os.system("rm -r audio")
+        os.system("mkdir audio")
+
+
+        os.system("rm -r results")
+        os.system("mkdir results")
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         
         # Initialize the pre-trained speaker diarization pipeline
@@ -581,7 +585,16 @@ class VideoDubbing:
         combined += silence
         # Export the combined audio to the output file
         combined.export("audio/output.wav", format="wav")
-                
+
+        os.system('pip install -r requirements.txt > /dev/null 2>&1')
+
+        install_if_not_installed('protobuf', 'pip install protobuf==3.19.6')
+        install_if_not_installed('spacy', 'pip install spacy==3.8.2')
+        install_if_not_installed('TTS', 'pip install --no-deps TTS==0.21.0')
+        install_if_not_installed('packaging', 'pip install packaging==20.9')
+        install_if_not_installed('openai-whisper', 'pip install openai-whisper==20240930')
+        install_if_not_installed('deepface', 'pip install deepface==0.0.93')
+        os.system('pip install numpy==1.26.4 > /dev/null 2>&1')
         
         # Initialize Spleeter with the 2stems model (vocals + accompaniment)
         separator = Separator()
@@ -659,6 +672,7 @@ class VideoDubbing:
 		
 
 def main():
+	os.system("video_path.mp4")
 	video_path = None
 	if args.yt_url:
 		os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {args.yt_url}")
