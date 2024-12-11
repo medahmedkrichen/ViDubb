@@ -680,7 +680,7 @@ language_mapping = {
 
 
 def process_video(video, source_language, target_language, use_wav2lip, whisper_model, bg_sound):
-    os.system("video_path.mp4")
+    os.system("rm video_path.mp4")
     video_path = None
     if "youtube.com" in video:
         os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {video}")
