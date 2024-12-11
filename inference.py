@@ -661,7 +661,7 @@ class VideoDubbing:
 
             shutil.move(source_path, destination_folder)
 	
-	os.system('pip install -r requirements.txt > /dev/null 2>&1')	
+        os.system('pip install -r requirements.txt > /dev/null 2>&1')	
 
 def main():
 	os.system("rm video_path.mp4")
