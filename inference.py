@@ -672,7 +672,7 @@ class VideoDubbing:
 		
 
 def main():
-	os.system("video_path.mp4")
+	os.system("rm video_path.mp4")
 	video_path = None
 	if args.yt_url:
 		os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {args.yt_url}")
