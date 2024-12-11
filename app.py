@@ -76,8 +76,12 @@ class VideoDubbing:
         self.Context_translation = Context_translation
         self.huggingface_auth_token = huggingface_auth_token
         
-        # Speaker Diarization
+        os.system("rm -r audio")
+        os.system("mkdir audio")
 
+
+        os.system("rm -r results")
+        os.system("mkdir results")
         
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         
@@ -676,7 +680,7 @@ language_mapping = {
 
 
 def process_video(video, source_language, target_language, use_wav2lip, whisper_model, bg_sound):
-    print(video, source_language, target_language, use_wav2lip, whisper_model, bg_sound)
+    os.system("video_path.mp4")
     video_path = None
     if "youtube.com" in video:
         os.system(f"yt-dlp -f best -o 'video_path.mp4' --recode-video mp4 {video}")
