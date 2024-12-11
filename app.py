@@ -738,7 +738,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
                 submit_button = gr.Button("Process Video", variant="primary")
         
         with gr.Column(scale=2):
-            output_video = gr.Video(label="Processed Video")
+            output_video = gr.Video(label="Processed Video",height=500, width=500)
             error_message = gr.Textbox(label="Status/Error Message")
 
     submit_button.click(
