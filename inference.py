@@ -611,7 +611,7 @@ class VideoDubbing:
         subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
         shutil.move(output_file_paths, "audio/")
-        os.system('pip install -r requirements.txt > /dev/null 2>&1')
+        
         
         
         if self.Voice_denoising:
@@ -660,7 +660,8 @@ class VideoDubbing:
             destination_folder = 'results'
 
             shutil.move(source_path, destination_folder)
-		
+	
+	os.system('pip install -r requirements.txt > /dev/null 2>&1')	
 
 def main():
 	os.system("rm video_path.mp4")
