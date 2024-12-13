@@ -6,7 +6,7 @@
 [![Open In Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue.svg)](https://www.kaggle.com/your-username/your-notebook)
 
 
-<div align="center">
+<div align="center" style="width:100%;>
   
 |Kaggle|Colab|
 |:-:|:-:|
