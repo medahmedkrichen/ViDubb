@@ -173,7 +173,7 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     This command will:
     - Download the video from YouTube.
     - Perform lip-sync translation from English to French.
-    - Output a dubbed video with lip-syncing.
+    - Output a dubbed video with lip-syncing in results.
 
 ### 8) Launch the Gradio Web App
 1. **Start the web application**:
