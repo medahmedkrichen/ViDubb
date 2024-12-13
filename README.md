@@ -224,13 +224,41 @@ options:
     http://localhost:7860/
     ```
 
----
 
 By following these steps, you should be able to set up and run ViDubb for video dubbing with AI-powered voice and lip synchronization.
 
-
 ---
 
-### License
+## Detailed Features and Technical Details
+
+
+- Speaker Diarization: Identifies and separates speech segments from different speakers in the video.
+- Frame Extraction: Extracts individual frames from the video for potential lip-sync analysis.
+- Face Detection and Tracking: Locates and tracks faces within video frames.
+
+- Audio Extraction: Extracts the audio track from the video.
+- Audio Transcription: Transcribes the audio into text using a pre-trained speech-to-text model.
+- Audio Segmentation: Splits the audio into segments corresponding to different speakers and speech events.
+- Audio Emotion Analysis (Optional): Analyzes the emotional content of the audio (not fully implemented in the provided code).
+
+- Text Translation: Translates the transcribed text from the source language to the target language using a pre-trained translation model.
+- Text Segmentation: Breaks down the translated text into smaller segments for easier processing and synthesis.
+
+- Voice Cloning (Optional): Synthesizes speech in the voice of a specific speaker (not explicitly shown in the code).
+- Emotion-Based Synthesis: Generates speech with appropriate emotional tones based on the analyzed emotions in the original audio.
+
+- Lip-Synchronization (Optional): Aligns the synthesized audio with the lip movements of the original speakers (requires additional processing).
+- Video and Audio Merging: Combines the original video with the synthesized audio to create the dubbed video.
+- Video Export: Exports the final dubbed video in a desired format.
+
+- Background Music Handling: Handles background music in the original video, either removing it or adjusting its volume to match the dubbed audio.
+- Error Handling and Logging: Includes mechanisms to handle potential errors and log relevant information for debugging and analysis.
+- User Interface (Optional): Provides a user-friendly interface for selecting input videos, choosing languages, and customizing output settings.
+- Batch Processing: Allows processing multiple videos in a single run.
+- Cloud Integration: Leverages cloud-based services for resource-intensive tasks like translation and speech synthesis.
+By combining these features, the project aims to automate the process of dubbing videos into different languages, making it more efficient and accessible.
+
+---
+## License
 
 Copyright © 2024 
