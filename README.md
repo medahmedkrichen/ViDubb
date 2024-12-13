@@ -167,9 +167,11 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
 
 ### 7) Run the Project
 1. **Run the inference script** to process a video:
+   
     ```bash
     python inference.py --yt_url "https://www.youtube.com/shorts/MCS5K9nWfGM" --source_language "en" --target_language "fr" --LipSync True --Bg_sound True
     ```
+    
     This command will:
     - --yt_url: Download the video from YouTube you can change it to "--video_url" if you want to work with local file.
     - --LipSync True: Perform lip-sync translation
