@@ -119,6 +119,9 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     HF_TOKEN="your_huggingface_token"
     Groq_TOKEN="your_groq_token"
     ```
+> [!NOTE]
+>
+> You can obtain your `HF_TOKEN` from [Hugging Face](https://huggingface.co/settings/tokens) to use the **speaker separation**, make sure to request access to [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1).
 
 ### 4) Install Dependencies
 1. **Install FFmpeg** (for audio/video processing):
