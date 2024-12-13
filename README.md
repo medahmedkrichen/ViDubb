@@ -42,7 +42,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [7) Run the Project](#7-run-the-project)
    - [8) Launch the Gradio Web App](#8-launch-the-gradio-web-app)
 6. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
-   - [1. Speaker Diarization](#1-Speaker-Diarization)
+   - [1. Speaker Diarization](#1-speaker-diarization)
    - [Lip-Sync (Optional)](#lip-sync-optional)
    - [Text Transcription](#text-transcription)
    - [Sentence Segmentation](#sentence-segmentation)
