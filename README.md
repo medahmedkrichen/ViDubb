@@ -270,6 +270,14 @@ The provided code implements a robust video dubbing pipeline, leveraging various
 By combining these techniques and leveraging the power of machine learning, the code effectively addresses the challenges of video dubbing, delivering high-quality results.
 
 ---
+
 ## License
 
-Copyright © 2024 
+> [!Caution]
+>
+> When using this tool, please comply with relevant laws, including copyright, data protection, and privacy laws. Do not use this tool without permission from the original author and/or rights holder.
+
+`ViDubb` follows the Apache License 2.0. When using this tool, please comply with relevant laws, including copyright, data protection, and privacy laws. Do not use this tool without permission from the original author and/or rights holder.
+
+---
+
