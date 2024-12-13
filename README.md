@@ -21,6 +21,24 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 ---
 
+
+## Examples (soon)
+
+### With or Without Background Examples
+
+| Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
+| <video src=""> | <video src=""> |
+
+
+### LipSync Example
+
+| Original Video                                               | ViDubb with LipSync                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <video src=""> | <video src=""> |
+
+---
+
 <details open>
 
 <summary>Table of Contents </summary>
@@ -28,10 +46,9 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 1. [Introduction](#introduction)
    - [Key Features](#key-features)
 2. [TO DO List](#to-do-list)
-3. [Examples](#examples)
    - [With or Without Background Examples](#with-or-without-background-examples)
    - [LipSync Example](#lipSync-example)
-5. [ViDubb Installation and Usage Guide](#vidubb-installation-and-usage-guide)
+3. [ViDubb Installation and Usage Guide](#vidubb-installation-and-usage-guide)
    - [0) Install Anaconda](#0-install-anaconda)
    - [1) Set Up the Conda Environment](#1-set-up-the-conda-environment)
    - [2) Clone the Repository](#2-clone-the-repository)
@@ -41,7 +58,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [6) Download Wave2Lip Models](#6-download-wave2lip-models)
    - [7) Run the Project](#7-run-the-project)
    - [8) Launch the Gradio Web App](#8-launch-the-gradio-web-app)
-6. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
+4. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
    - [Speaker Diarization](#speaker-diarization)
    - [Lip-Sync (Optional)](#lip-sync-optional)
    - [Text Transcription](#text-transcription)
@@ -51,8 +68,8 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [Audio Synthesis](#audio-synthesis)
    - [Audio and Video Synchronization](#audio-and-video-synchronization)
    - [Audio and Video Mixing](#audio-and-video-mixing)
-7. [Acknowledgment](#acknowledgment)
-8. [License](#license)
+5. [Acknowledgment](#acknowledgment)
+6. [License](#license)
 
 
 </details>
@@ -88,22 +105,6 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 - [ ] Improve the Dynamic Lip-Sync Technology with a lot of speakers.
 - [ ] Deploy ViDubb on HuggingFace space
 
----
-
-## Examples (soon)
-
-### With or Without Background Examples
-
-| Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
-| <video src=""> | <video src=""> |
-
-
-### LipSync Example
-
-| Original Video                                               | ViDubb with LipSync                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <video src=""> | <video src=""> |
 
 ---
 
