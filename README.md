@@ -165,7 +165,7 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     - Perform lip-sync translation from English to French.
     - Output a dubbed video with lip-syncing.
 
-### 8) Launch the Web App
+### 8) Launch the Gradio Web App
 1. **Start the web application**:
     ```bash
     python app.py
