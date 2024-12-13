@@ -21,7 +21,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 <details open>
 
-<summary>## Table of Contents</summary>
+<summary> ## Table of Contents </summary>
 
 
 - [Certifications](#certifications)
