@@ -15,11 +15,9 @@
 
 
 
-## freeCodeCamp.org's open-source codebase and curriculum
+## Video Dubbing with AI Cloning, Multilingual Capabilities, and Lip-Sync
 
-[freeCodeCamp.org](https://www.freecodecamp.org) is a friendly community where you can learn to code for free. It is run by a [donor-supported 501(c)(3) charity](https://www.freecodecamp.org/donate) to help millions of busy adults transition into tech. Our community has already helped more than 40,000 people get their first developer job.
-
-Our full-stack web development and machine learning curriculum is completely free and self-paced. We have thousands of interactive coding challenges to help you expand your skills.
+ViDubb is an advanced AI-powered video dubbing solution focused on delivering high-quality, efficient dubbing for multilingual content. By utilizing cutting-edge voice cloning technology, ViDubb generates realistic voiceovers in multiple languages with exceptional accuracy. The system ensures perfect lip-sync synchronization, matching the voiceovers to the actors' movements, providing a seamless viewing experience. This approach not only enhances the natural flow of dialogue but also preserves the authenticity of the original video. ViDubb streamlines the dubbing process, enabling faster turnaround times while maintaining top-tier audio and visual quality for global audiences.
 
 ## Table of Contents
 
