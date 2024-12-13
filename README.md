@@ -30,8 +30,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
 | <video controls width="360" height="240">
    <source src="" type='video/mp4'/>
-</video> | 
-<video src=""> |<video src=""> |
+</video> | <video src=""> |<video src=""> |
 
 
 ### LipSync Example
