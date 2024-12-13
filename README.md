@@ -6,7 +6,7 @@
 [![Open In Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue.svg)](https://www.kaggle.com/your-username/your-notebook)
 
 |Kaggle|Colab|
-|:-:|:-:|
+|:-:|       :-:|
 |[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|
 |Have More memory and GPU time!                                                                                   |Cancel restarting session when asked|
 
