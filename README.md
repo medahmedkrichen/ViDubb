@@ -28,7 +28,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 | Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
-| <video controls width="360" height="240" src="https://esprittncom-my.sharepoint.com/:v:/g/personal/mohamedahmed_krichen_esprit_tn/ERgh1YkJ4XFCgkFrnRN6YYYBtb6W-fUwT2M5CYMxjJmgGQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kHa3bx"> </video> | <video src=""> |<video src=""> |
+| <video controls width="360" height="240" src="https://esprittncom-my.sharepoint.com/personal/mohamedahmed_krichen_esprit_tn/_layouts/15/stream.aspx?id=%2Fpersonal%2Fmohamedahmed_krichen_esprit_tn%2FDocuments%2FVidubb_videos%2Forigin1.mp4"> </video> | <video src=""> |<video src=""> |
 
 
 ### LipSync Example
