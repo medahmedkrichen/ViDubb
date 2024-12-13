@@ -8,7 +8,7 @@
     
 |Kaggle|Colab|Gradio|
 |:-------:|:-------:|:-------:|
-|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|[![Gradio](https://img.shields.io/badge/gradio-app-blue)](https://github.com/gradio-app/gradio) |
+|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|[![Gradio](https://img.shields.io/badge/gradio-web_app-blue)](https://github.com/gradio-app/gradio) |
 |More memory and GPU time!|Cancel Restarting Session when Asked|Gradio Web App|
   
 </div>
