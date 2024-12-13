@@ -253,7 +253,7 @@ options:
     ```
     http://localhost:7860/
     ```
-<p align="center"><img src="gradio app.jpeg" width="900" height="900">
+<p align="center"><img src="gradio app.jpeg" width="900" height="500">
 
 By following these steps, you should be able to set up and run ViDubb for video dubbing with AI-powered voice and lip synchronization.
 
