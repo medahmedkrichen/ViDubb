@@ -45,6 +45,7 @@ Leveraging state-of-the-art AI, **ViDubb** sets new standards in dubbing accurac
 
 ### Key features include:
 
+- **Download Direct Video from YouTube**: Allows users to download videos directly from YouTube for immediate dubbing and localization, saving time and simplifying the workflow.
 - **Multi-Language Support**: Offers dubbing in a variety of languages, ensuring broad global accessibility.
 - **AI Voice Cloning**: Creates realistic, high-quality voiceovers that capture the tone and emotion of the original content.
 - **Dynamic Lip-Sync Technology**: Ensures perfect synchronization with video visuals, even when multiple speakers are involved, enhancing realism and interactivity.
@@ -54,7 +55,6 @@ Leveraging state-of-the-art AI, **ViDubb** sets new standards in dubbing accurac
 - **Speaker Diarization**: Identifies and separates speakers in the audio, ensuring accurate voice assignment for each speaker during dubbing.
 - **Web Interface Support**: Provides an intuitive web interface for easy upload, management, and control of dubbing projects.
 - **CPU and GPU Compatibility**: Works seamlessly on both CPU and GPU systems, optimizing performance based on available resources.
-- **Download Direct Video from YouTube**: Allows users to download videos directly from YouTube for immediate dubbing and localization, saving time and simplifying the workflow.
 
 Our mission is to provide an efficient and high-quality AI-driven dubbing solution that empowers content creators to expand their global reach, bringing videos to audiences in multiple languages with perfect synchronization and immersive quality.
 
