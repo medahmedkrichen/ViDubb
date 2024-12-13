@@ -307,6 +307,8 @@ By combining these techniques and leveraging the power of machine learning, the 
 - [Wav2Lip](https://github.com/zabique/Wav2Lip)
 - [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
 - [HuggingFace video-dubbing](https://huggingface.co/spaces/artificialguybr/video-dubbing)
+- [Kaggle free Notebook](https://www.kaggle.com/)
+- [Colab free Notebook](https://colab.research.google.com/)
 - All open source models :)
   
 ---
