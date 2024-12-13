@@ -1,14 +1,5 @@
 <p align="center"><img src="Vidubb_img.png" width="1000" height="300">
 
-<div align="center">
-
-[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-[![Setup Automated](https://img.shields.io/badge/setup-automated-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
-
-
-</div>
-
-
 
 <div align="center">
     
@@ -19,6 +10,13 @@
   
 </div>
 
+<div align="center">
+
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+[![Setup Automated](https://img.shields.io/badge/setup-automated-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
+
+
+</div>
 
 ## freeCodeCamp.org's open-source codebase and curriculum
 
