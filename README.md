@@ -178,7 +178,7 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     - --Bg_sound True preserve the bacground sounds in wanted
     - Output a dubbed video with lip-syncing in results.
 
-> [!TIP]
+> [!TIPs]
 >  --Bg_sound True: can lead to more noise in some videos with less background sound in origin video
 > 
 >  --LipSync True: will take more time and more memory
