@@ -37,6 +37,29 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 </details>
 
 
+## Introduction
+
+**ViDubb** is an advanced AI-powered video dubbing solution designed to deliver high-quality, efficient dubbing for multilingual content. By integrating cutting-edge voice cloning technology and dynamic lip-sync synchronization, ViDubb ensures that voiceovers are perfectly aligned with the original video’s dialogue and actor movements, even when multiple speakers are involved, providing a seamless viewing experience across languages.
+
+Leveraging state-of-the-art AI, **ViDubb** sets new standards in dubbing accuracy and naturalness, making it ideal for global content localization, film, media, and educational purposes. The tool enables content creators and businesses to quickly adapt their videos for international audiences while maintaining top-tier audio and visual quality.
+
+### Key features include:
+
+- **Multi-Language Support**: Offers dubbing in a variety of languages, ensuring broad global accessibility.
+- **AI Voice Cloning**: Creates realistic, high-quality voiceovers that capture the tone and emotion of the original content.
+- **Dynamic Lip-Sync Technology**: Ensures perfect synchronization with video visuals, even when multiple speakers are involved, enhancing realism and interactivity.
+- **Background Sound Preservation**: Retains original background sounds to maintain the authenticity of the video.
+- **Efficient Dubbing Process**: Streamlines the video dubbing workflow, enabling faster and more cost-effective localization.
+- **Sentence Tokenization**: Breaks down content into manageable segments for better translation and synchronization.
+- **Speaker Diarization**: Identifies and separates speakers in the audio, ensuring accurate voice assignment for each speaker during dubbing.
+- **Web Interface Support**: Provides an intuitive web interface for easy upload, management, and control of dubbing projects.
+- **CPU and GPU Compatibility**: Works seamlessly on both CPU and GPU systems, optimizing performance based on available resources.
+
+Our mission is to provide an efficient and high-quality AI-driven dubbing solution that empowers content creators to expand their global reach, bringing videos to audiences in multiple languages with perfect synchronization and immersive quality.
+
+
+---
+
 
 ### License
 
