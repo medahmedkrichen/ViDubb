@@ -29,8 +29,8 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [Key Features](#key-features)
 2. [TO DO List](#to-do-list)
 3. [Examples](#examples)
-   - [With/Without Background Examples](#With/Without-Background-Examples)
-   - [LipSync Example](#LipSync-Example)
+   - [With/Without Background Examples](#with/without-background-examples)
+   - [LipSync Example](#lipSync-example)
 5. [ViDubb Installation and Usage Guide](#vidubb-installation-and-usage-guide)
    - [0) Install Anaconda](#0-install-anaconda)
    - [1) Set Up the Conda Environment](#1-set-up-the-conda-environment)
@@ -98,7 +98,7 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 | <video src=""> | <video src=""> |
 
 
-### LipSync Examples
+### LipSync Example
 
 | Original Video                                               | ViDubb with LipSync                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
