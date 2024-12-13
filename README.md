@@ -29,7 +29,9 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [Key Features](#key-features)
 2. [TO DO List](#to-do-list)
 3. [Examples](#examples)
-4. [ViDubb Installation and Usage Guide](#vidubb-installation-and-usage-guide)
+   - [With/Without Background Examples](#With/Without-Background-Examples)
+   - [LipSync Example](#LipSync-Example)
+5. [ViDubb Installation and Usage Guide](#vidubb-installation-and-usage-guide)
    - [0) Install Anaconda](#0-install-anaconda)
    - [1) Set Up the Conda Environment](#1-set-up-the-conda-environment)
    - [2) Clone the Repository](#2-clone-the-repository)
@@ -39,7 +41,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [6) Download Wave2Lip Models](#6-download-wave2lip-models)
    - [7) Run the Project](#7-run-the-project)
    - [8) Launch the Gradio Web App](#8-launch-the-gradio-web-app)
-5. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
+6. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
    - [Speaker Diarization](#Speaker-Diarization)
    - [Lip-Sync (Optional)](#lip-sync-optional)
    - [Text Transcription](#text-transcription)
@@ -49,7 +51,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [Audio Synthesis](#audio-synthesis)
    - [Audio and Video Synchronization](#audio-and-video-synchronization)
    - [Audio and Video Mixing](#audio-and-video-mixing)
-6. [License](#license)
+7. [License](#license)
 
 
 </details>
@@ -89,7 +91,16 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 
 ## Examples
 
-| Original Video                                               | ViDubb                                               |
+### With/Without Background Examples:
+
+| Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
+| <video src=""> | <video src=""> |
+
+
+### LipSync Examples:
+
+| Original Video                                               | ViDubb with LipSync                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | <video src=""> | <video src=""> |
 
