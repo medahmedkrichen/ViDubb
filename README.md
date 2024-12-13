@@ -180,6 +180,7 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     - --Bg_sound True preserve the bacground sounds in wanted
     - Output a dubbed video with lip-syncing in results.
   
+More options:
 
 ```bash
 usage: inference.py [-h] (--yt_url YT_URL | --video_url VIDEO_URL)
