@@ -25,15 +25,33 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 <summary>Table of Contents </summary>
 
+1. [Introduction](#introduction)
+   - [Key Features](#key-features)
+2. [TO DO List](#to-do-list)
+3. [Examples](#examples)
+4. [ViDubb Installation and Usage Guide](#vidubb-installation-and-usage-guide)
+   - [0) Install Anaconda](#0-install-anaconda)
+   - [1) Set Up the Conda Environment](#1-set-up-the-conda-environment)
+   - [2) Clone the Repository](#2-clone-the-repository)
+   - [3) Configure the `.env` File](#3-configure-the-env-file)
+   - [4) Install Dependencies](#4-install-dependencies)
+   - [5) Configure CUDA for GPU Acceleration](#5-configure-cuda-for-gpu-acceleration)
+   - [6) Download Wave2Lip Models](#6-download-wave2lip-models)
+   - [7) Run the Project](#7-run-the-project)
+   - [8) Launch the Gradio Web App](#8-launch-the-gradio-web-app)
+5. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
+   - [Speaker Diarization](#speaker-diarization)
+   - [Lip-Sync (Optional)](#lip-sync-optional)
+   - [Text Transcription](#text-transcription)
+   - [Sentence Segmentation](#sentence-segmentation)
+   - [Text Translation](#text-translation)
+   - [Emotion Analysis (Optional)](#emotion-analysis-optional)
+   - [Audio Synthesis](#audio-synthesis)
+   - [Audio and Video Synchronization](#audio-and-video-synchronization)
+   - [Audio and Video Mixing](#audio-and-video-mixing)
+6. [License](#license)
 
-- [Certifications](#certifications)
-- [The Learning Platform](#the-learning-platform)
-- [Reporting Bugs and Issues](#reporting-bugs-and-issues)
-- [Reporting Security Issues and Responsible Disclosure](#reporting-security-issues-and-responsible-disclosure)
-- [Contributing](#contributing)
-- [Platform, Build and Deployment Status](#platform-build-and-deployment-status)
-- [License](#license)
-  
+
 </details>
 
 
