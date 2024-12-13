@@ -76,7 +76,108 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 
 ---
 
-## Installation and Usage Guide
+## ViDubb Installation and Usage Guide
+
+ViDubb is an AI-powered video dubbing project that involves voice cloning, multilingual capabilities, lip-syncing, and background sound preservation. Follow the steps below to set up and run ViDubb.
+
+### 0) Install Anaconda
+Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/install/) installed on your system. Anaconda is used to manage Python environments and dependencies.
+
+### 1) Set Up the Conda Environment
+1. **Remove any existing environment** (if necessary):
+    ```bash
+    conda remove -n vidubbtest --all
+    ```
+
+2. **Create a new conda environment** with Python 3.10.14 and IPython:
+    ```bash
+    conda create -n "vidubbtest" python=3.10.14 ipython
+    ```
+
+3. **Activate the environment**:
+    ```bash
+    conda activate vidubbtest
+    ```
+
+### 2) Clone the Repository
+1. **Clone the ViDubb repository** from GitHub:
+    ```bash
+    git clone https://github.com/medahmedkrichen/ViDubb.git
+    ```
+
+2. **Navigate to the ViDubb directory**:
+    ```bash
+    cd ViDubb
+    ```
+
+### 3) Configure the `.env` File
+1. **Set up the `.env` file** with your Hugging Face API and Groq API tokens:
+    - Create a `.env` file in the `ViDubb` directory.
+    - Add the following lines:
+    ```bash
+    HF_TOKEN="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"
+    Groq_TOKEN="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"
+    ```
+
+### 4) Install Dependencies
+1. **Install FFmpeg** (for audio/video processing):
+    ```bash
+    sudo apt-get install ffmpeg
+    ```
+
+2. **Install Python dependencies** from the `requirements.txt` file:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### 5) Configure CUDA for GPU Acceleration
+1. **Install PyTorch with CUDA support** for GPU acceleration:
+    ```bash
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+    ```
+
+2. **Check if CUDA is available**:
+    Open a Python shell and run the following:
+    ```python
+    import torch
+    print(torch.cuda.is_available())
+    ```
+
+### 6) Download Wave2Lip Models
+1. **Download the Wav2Lip model**:
+    ```bash
+    wget 'https://iiitaphyd-my.sharepoint.com/personal/radrabha_m_research_iiit_ac_in/_layouts/15/download.aspx?share=EdjI7bZlgApMqsVoEUUXpLsBxqXbn5z8VTmoxp55YNDcIA' -O 'Wav2Lip/wav2lip_gan.pth'
+    ```
+
+2. **Download the face detection model**:
+    ```bash
+    wget "https://www.adrianbulat.com/downloads/python-fan/s3fd-619a316812.pth" -O "Wav2Lip/face_detection/detection/sfd/s3fd.pth"
+    ```
+
+### 7) Run the Project
+1. **Run the inference script** to process a video:
+    ```bash
+    python inference.py --yt_url "https://www.youtube.com/shorts/MCS5K9nWfGM" --source_language "en" --target_language "fr" --LipSync True
+    ```
+    This command will:
+    - Download the video from YouTube.
+    - Perform lip-sync translation from English to French.
+    - Output a dubbed video with lip-syncing.
+
+### 8) Launch the Web App
+1. **Start the web application**:
+    ```bash
+    python app.py
+    ```
+
+2. **Access the app** by opening a browser and going to:
+    ```
+    http://localhost:7860/
+    ```
+
+---
+
+By following these steps, you should be able to set up and run ViDubb for video dubbing with AI-powered voice and lip synchronization.
 
 
 
