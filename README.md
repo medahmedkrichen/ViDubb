@@ -168,12 +168,21 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
 ### 7) Run the Project
 1. **Run the inference script** to process a video:
     ```bash
-    python inference.py --yt_url "https://www.youtube.com/shorts/MCS5K9nWfGM" --source_language "en" --target_language "fr" --LipSync True
+    python inference.py --yt_url "https://www.youtube.com/shorts/MCS5K9nWfGM" --source_language "en" --target_language "fr" --LipSync True --Bg_sound True
     ```
     This command will:
-    - Download the video from YouTube.
-    - Perform lip-sync translation from English to French.
+    - --yt_url: Download the video from YouTube you can change it to "--video_url" if you want to work with local file.
+    - --LipSync True: Perform lip-sync translation
+    - --source_language "en" from English
+    - --target_language "fr" to French.
+    - --Bg_sound True preserve the bacground sounds in wanted
     - Output a dubbed video with lip-syncing in results.
+
+> [!TIP]
+>
+>  --Bg_sound True: can lead to more noise in some videos with less background sound in origin video
+>  --LipSync True: will take more time and more memory
+
 
 ### 8) Launch the Gradio Web App
 1. **Start the web application**:
