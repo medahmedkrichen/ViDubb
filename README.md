@@ -42,15 +42,15 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [7) Run the Project](#7-run-the-project)
    - [8) Launch the Gradio Web App](#8-launch-the-gradio-web-app)
 6. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
-   - [Speaker Diarization](#speaker-diarization)
-   - [Lip-Sync (Optional)](#lip-sync-optional)
-   - [Text Transcription](#text-transcription)
-   - [Sentence Segmentation](#sentence-segmentation)
-   - [Text Translation](#text-translation)
-   - [Emotion Analysis (Optional)](#emotion-analysis-optional)
-   - [Audio Synthesis](#audio-synthesis)
-   - [Audio and Video Synchronization](#audio-and-video-synchronization)
-   - [Audio and Video Mixing](#audio-and-video-mixing)
+   - [- Speaker Diarization](#speaker-diarization)
+   - [- Lip-Sync (Optional)](#lip-sync-optional)
+   - [- Text Transcription](#text-transcription)
+   - [- Sentence Segmentation](#sentence-segmentation)
+   - [- Text Translation](#text-translation)
+   - [- Emotion Analysis (Optional)](#emotion-analysis-optional)
+   - [- Audio Synthesis](#audio-synthesis)
+   - [- Audio and Video Synchronization](#audio-and-video-synchronization)
+   - [- Audio and Video Mixing](#audio-and-video-mixing)
 7. [License](#license)
 
 
@@ -266,7 +266,7 @@ The provided code implements a robust video dubbing pipeline, leveraging various
 **- Speaker Diarization**
 * **Technical Implementation:** Employs the `pyannote.audio` library, a state-of-the-art speaker diarization toolkit. It segments the audio into speaker turns, allowing for accurate identification of who is speaking at any given time.
 
-**-Lip-Sync (Optional)**
+**- Lip-Sync (Optional)**
 * **Technical Implementation:**
   - **Frame Extraction:** Uses OpenCV to extract frames from the video based on the speaker diarization results.
   - **Face Detection:** Leverages the Haar Cascade classifier or a more advanced deep learning-based face detector to locate faces within each frame.
