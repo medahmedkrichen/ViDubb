@@ -2,7 +2,7 @@
     
 # ViDubb: Free AI Video Dubbing with Voice and Emotion Cloning, Multilingual Support, and High-Quality Lip-Sync
 
-<p align="center"><img src="Vidubb_img.png" width="900" height="290">
+<p align="center"><img src="Vidubb_img.png" width="1200" height="290">
 </div>
 <div align="center">
     
