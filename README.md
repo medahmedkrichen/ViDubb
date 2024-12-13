@@ -2,7 +2,7 @@
     
 # ViDubb: Free AI Video Dubbing with Voice and Emotion Cloning, Multilingual Support, and Lip-Sync
 
-<p align="center"><img src="Vidubb_img.png" width="1200" height="290">
+<p align="center"><img src="images/Vidubb_img.png" width="1200" height="290">
 </div>
 <div align="center">
     
@@ -238,7 +238,7 @@ options:
   --Bg_sound BG_SOUND   Keep the background sound of the original video,
                         though it might be slightly noisy
 ```
-<p align="center"><img src="inference.png" width="800" height="400">
+<p align="center"><img src="images/inference.png" width="800" height="400">
 
 > [!TIP]
 >  --Bg_sound True: can lead to more noise in some videos with less background sound in origin video
@@ -256,7 +256,7 @@ options:
     ```
     http://localhost:7860/
     ```
-<p align="center"><img src="gradio app.jpeg" width="900" height="650">
+<p align="center"><img src="images/gradio app.jpeg" width="900" height="650">
 
 By following these steps, you should be able to set up and run ViDubb for video dubbing with AI-powered voice and lip synchronization.
 
