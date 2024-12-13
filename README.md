@@ -16,7 +16,7 @@
 </div>
 
 <div align="center">
-  <table style="width: 100%;">
+  <table width=200>
     <tr>
       <th>Kaggle</th>
       <th>Colab</th>
