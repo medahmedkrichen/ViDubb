@@ -1,7 +1,7 @@
 # ViDubb: Video Dubbing with AI Voice Cloning, Multilingual Features, and Lip-Sync
 
 <div align="center">
-<h1>Linly-Dubbing WebUI</h1>
+
 
 <p align="center"><img src="Vidubb_img.png" width="1000" height="300">
 
