@@ -1,15 +1,16 @@
-<p align="center"><img src="Vidubb_img.png" width="1000" height="300"></p>
+<p align="center"><img src="Vidubb_img.png" width="1000" height="300">
 
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 [![Setup Automated](https://img.shields.io/badge/setup-automated-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)
 [![Open In Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue.svg)](https://www.kaggle.com/your-username/your-notebook)
 
+<p align="center">
 |Kaggle|Colab|
-|:-:|       :-:|
+|:-:|:-:|
 |[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|
-|Have More memory and GPU time!                                                                                   |Cancel restarting session when asked|
-
+|More memory and GPU time!                                                                                   |Cancel Restarting Session when Asked|
+</p>
 ## freeCodeCamp.org's open-source codebase and curriculum
 
 [freeCodeCamp.org](https://www.freecodecamp.org) is a friendly community where you can learn to code for free. It is run by a [donor-supported 501(c)(3) charity](https://www.freecodecamp.org/donate) to help millions of busy adults transition into tech. Our community has already helped more than 40,000 people get their first developer job.
