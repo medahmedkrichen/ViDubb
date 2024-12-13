@@ -26,7 +26,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 ### With or Without Background Examples
 
-| Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
+| Original Video in French                                              | ViDubb With Background in English                                          | ViDubb Without Background in English           |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
 | <video src="https://github.com/user-attachments/assets/9821981c-b766-4e7f-8199-dbe332d17039"> | <video src=""> |<video src=""> |
 
