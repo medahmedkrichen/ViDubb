@@ -15,6 +15,22 @@
   
 </div>
 
+<div align="center">
+  <table style="width: 100%;">
+    <tr>
+      <th>Kaggle</th>
+      <th>Colab</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Kaggle"></a></td>
+      <td><a href="https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Colab"></a></td>
+    </tr>
+    <tr>
+      <td>More memory and GPU time!</td>
+      <td>Cancel Restarting Session when Asked</td>
+    </tr>
+  </table>
+</div>
 
 ## freeCodeCamp.org's open-source codebase and curriculum
 
