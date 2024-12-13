@@ -8,7 +8,7 @@
 
 <div align="center">
   
-|Kaggle|Colab| |
+|Kaggle|Colab| 
 |:-:|:-:|
 |[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|
 |More memory and GPU time!                                                                                   |Cancel Restarting Session when Asked|
