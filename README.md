@@ -115,8 +115,8 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     - Create a `.env` file in the `ViDubb` directory.
     - Add the following lines:
     ```bash
-    HF_TOKEN="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"
-    Groq_TOKEN="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"
+    HF_TOKEN="your_huggingface_token"
+    Groq_TOKEN="your_groq_token"
     ```
 
 ### 4) Install Dependencies
