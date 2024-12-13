@@ -196,6 +196,8 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     ```
 
 ### 7) Run the Project
+<p align="center"><img src="inference.png" width="900" height="290">
+
 1. **Run the inference script** to process a video:
    
     ```bash
