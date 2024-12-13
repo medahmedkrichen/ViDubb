@@ -1,3 +1,8 @@
+# Intelligent Multi-language AI Dubbing/Translation Tool - Linly-Dubbing — "AI Empowerment, Language Without Borders"
+
+<div align="center">
+<h1>Linly-Dubbing WebUI</h1>
+
 <p align="center"><img src="Vidubb_img.png" width="1000" height="300">
 
 <div align="center">
