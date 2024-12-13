@@ -2,7 +2,7 @@
     
 # ViDubb: Video Dubbing with AI Voice Cloning, Multilingual Features, and Lip-Sync
 
-<p align="center"><img src="Vidubb_img.png" width="1000" height="300">
+<p align="center"><img src="Vidubb_img.png" width="1000" height="250">
 
 <div align="center">
     
