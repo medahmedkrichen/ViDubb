@@ -122,7 +122,11 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
 > [!NOTE]
 >
 > You can obtain your `HF_TOKEN` from [Hugging Face](https://huggingface.co/settings/tokens) to use the **speaker separation**, make sure to request access to [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1).
-> > You can obtain your `Groq_TOKEN` from [GroqCloud](https://huggingface.co/settings/tokens) to use the free API model "llama3-70b" (Optional)
+> > You can obtain your `Groq_TOKEN` from [GroqCloud](https://huggingface.co/settings/tokens) Use the free API model 'llama3-70b' for translation instead of the standard model (optional).
+> >
+> [!TIP]
+>
+> llama3-70b is effective for translating languages in the Latin language family, but it is not as effective for languages like Arabic or Mandarin. If you choose not to use it, leave the field empty.
 
 ### 4) Install Dependencies
 1. **Install FFmpeg** (for audio/video processing):
