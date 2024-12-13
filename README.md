@@ -128,7 +128,7 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
 
 > [!TIP]
 >
-> llama3-70b is effective for translating languages in the Latin language family, but it is not as effective for languages like Arabic or Mandarin. If you choose not to use it, leave the field empty.
+> "llama3-70b" is effective for translating languages in the Latin language family, but it is not as effective for languages like Arabic or Mandarin. If you choose not to use it, leave the field empty.
 
 ### 4) Install Dependencies
 1. **Install FFmpeg** (for audio/video processing):
