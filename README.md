@@ -68,6 +68,14 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 
 ---
 
+## Examples
+
+| Original Video                                               | ViDubb                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <video src=""> | <video src=""> |
+
+---
+
 
 
 ### License
