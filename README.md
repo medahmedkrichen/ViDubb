@@ -301,7 +301,11 @@ By combining these techniques and leveraging the power of machine learning, the 
 
 ---
 ## Acknowledgment
-
+- [Linly Dubbing](https://github.com/Kedreamix/Linly-Dubbing/tree/main)
+- [Wav2Lip](https://github.com/zabique/Wav2Lip)
+- [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
+- [HuggingFace video-dubbing](https://huggingface.co/spaces/artificialguybr/video-dubbing)
+  
 ---
 
 ## License
