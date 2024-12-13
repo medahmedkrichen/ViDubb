@@ -42,7 +42,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [7) Run the Project](#7-run-the-project)
    - [8) Launch the Gradio Web App](#8-launch-the-gradio-web-app)
 6. [Detailed Features and Technical Details](#detailed-features-and-technical-details)
-   - [1. Speaker Diarization](#1-speaker-diarization)
+   - [Speaker Diarization](#speaker-diarization)
    - [Lip-Sync (Optional)](#lip-sync-optional)
    - [Text Transcription](#text-transcription)
    - [Sentence Segmentation](#sentence-segmentation)
@@ -263,37 +263,37 @@ By following these steps, you should be able to set up and run ViDubb for video 
 
 The provided code implements a robust video dubbing pipeline, leveraging various machine learning and audio/video processing techniques. Here's a detailed breakdown of the key features and their underlying technical implementations:
 
-**1. Speaker Diarization**
+**- Speaker Diarization**
 * **Technical Implementation:** Employs the `pyannote.audio` library, a state-of-the-art speaker diarization toolkit. It segments the audio into speaker turns, allowing for accurate identification of who is speaking at any given time.
 
-**2. Lip-Sync (Optional)**
+**-Lip-Sync (Optional)**
 * **Technical Implementation:**
   - **Frame Extraction:** Uses OpenCV to extract frames from the video based on the speaker diarization results.
   - **Face Detection:** Leverages the Haar Cascade classifier or a more advanced deep learning-based face detector to locate faces within each frame.
   - **Face Alignment and Normalization:** Prepares the detected faces for further processing by aligning them to a standard template.
   - **Lip-Sync Model:** Employs a pre-trained lip-sync model, such as Wav2Lip, to generate realistic lip movements based on the input audio and extracted facial features.
 
-**3. Text Transcription**
+**- Text Transcription**
 * **Technical Implementation:** Leverages the Whisper model, a robust speech-to-text model, to transcribe the audio content of the video into text. This provides a textual representation of the audio, which is crucial for subsequent text-based processing.
 
-**4. Sentence Segmentation**
+**- Sentence Segmentation**
 * **Technical Implementation:** Utilizes the NLTK library's sentence tokenization capabilities to divide the transcribed text into meaningful sentences. This segmentation is essential for accurate translation and emotion analysis.
 
-**5. Text Translation**
+**- Text Translation**
 * **Technical Implementation:**
   - **Direct Translation:** Leverages the MarianMT model, a powerful machine translation system, to translate the segmented sentences from the source language to the target language.
   - **Context-Aware Translation (Optional):** Employs a large language model (LLM) like "llama3-70b-8192" to provide context-aware translations, improving the quality and accuracy of the translations.
 
-**6. Emotion Analysis (Optional)**
+**- Emotion Analysis (Optional)**
 * **Technical Implementation:** Leverages a pre-trained emotion recognition model, such as the one provided by SpeechBrain, to analyze the emotions expressed in the audio segments. The model classifies emotions into categories like anger, happiness, sadness, and neutral.
 
-**7. Audio Synthesis**
+**- Audio Synthesis**
 * **Technical Implementation:** Employs a text-to-speech (TTS) system, such as the one provided by the TTS library, to synthesize audio from the translated text. The TTS system can be further customized to match the speaker's voice and emotion.
 
-**8. Audio and Video Synchronization**
+**- Audio and Video Synchronization**
 * **Technical Implementation:** Leverages FFmpeg to synchronize the generated audio with the original video, ensuring that the lip movements align with the spoken words.
 
-**9. Audio and Video Mixing**
+**- Audio and Video Mixing**
 * **Technical Implementation:** Employs libraries like PyDub to mix the original video with the newly generated audio, creating the final dubbed video.
 
 By combining these techniques and leveraging the power of machine learning, the code effectively addresses the challenges of video dubbing, delivering high-quality results.
