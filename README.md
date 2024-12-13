@@ -169,7 +169,7 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
 1. **Run the inference script** to process a video:
    
     ```bash
-    python inference.py --yt_url "https://www.youtube.com/shorts/MCS5K9nWfGM" --source_language "en" --target_language "fr" --LipSync True --Bg_sound True
+    python inference.py --yt_url "https://www.youtube.com/shorts/ULptP9egQ6Q" --source_language "en" --target_language "fr" --LipSync True --Bg_sound True
     ```
     
     This command will:
