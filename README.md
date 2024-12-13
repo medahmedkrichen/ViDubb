@@ -1,6 +1,6 @@
 <div align="center">
     
-# ViDubb: Video Dubbing with AI Voice Cloning, Multilingual Features, and Lip-Sync
+# ViDubb: Video Dubbing with AI Voice and emotion Cloning, Multilingual Features, and Lip-Sync
 
 <p align="center"><img src="Vidubb_img.png" width="1000" height="310">
 </div>
@@ -252,10 +252,8 @@ By following these steps, you should be able to set up and run ViDubb for video 
 - Video Export: Exports the final dubbed video in a desired format.
 
 - Background Music Handling: Handles background music in the original video, either removing it or adjusting its volume to match the dubbed audio.
-- Error Handling and Logging: Includes mechanisms to handle potential errors and log relevant information for debugging and analysis.
 - User Interface (Optional): Provides a user-friendly interface for selecting input videos, choosing languages, and customizing output settings.
-- Batch Processing: Allows processing multiple videos in a single run.
-- Cloud Integration: Leverages cloud-based services for resource-intensive tasks like translation and speech synthesis.
+
 By combining these features, the project aims to automate the process of dubbing videos into different languages, making it more efficient and accessible.
 
 ---
