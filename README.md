@@ -229,7 +229,6 @@ options:
 By following these steps, you should be able to set up and run ViDubb for video dubbing with AI-powered voice and lip synchronization.
 
 
-
 ---
 
 ### License
