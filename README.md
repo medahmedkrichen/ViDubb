@@ -1,4 +1,4 @@
-# Intelligent Multi-language AI Dubbing/Translation Tool - Linly-Dubbing — "AI Empowerment, Language Without Borders"
+# ViDubb: Video Dubbing with AI Voice Cloning, Multilingual Features, and Lip-Sync
 
 <div align="center">
 <h1>Linly-Dubbing WebUI</h1>
