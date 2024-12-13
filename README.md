@@ -51,7 +51,8 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
    - [Audio Synthesis](#audio-synthesis)
    - [Audio and Video Synchronization](#audio-and-video-synchronization)
    - [Audio and Video Mixing](#audio-and-video-mixing)
-7. [License](#license)
+7. [Acknowledgment](#acknowledgment)
+8. [License](#license)
 
 
 </details>
@@ -297,6 +298,9 @@ The provided code implements a robust video dubbing pipeline, leveraging various
 * **Technical Implementation:** Employs libraries like PyDub to mix the original video with the newly generated audio, creating the final dubbed video.
 
 By combining these techniques and leveraging the power of machine learning, the code effectively addresses the challenges of video dubbing, delivering high-quality results.
+
+---
+## Acknowledgment
 
 ---
 
