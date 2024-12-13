@@ -196,7 +196,6 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
     ```
 
 ### 7) Run the Project
-<p align="center"><img src="inference.png" width="800" height="400">
 
 1. **Run the inference script** to process a video:
    
@@ -244,6 +243,7 @@ options:
 > 
 >  --LipSync True: will take more time and more memory
 
+<p align="center"><img src="inference.png" width="800" height="400">
 
 ### 8) Launch the Gradio Web App
 1. **Start the web application**:
