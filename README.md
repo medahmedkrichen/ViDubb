@@ -153,7 +153,7 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
 >
 > You can obtain your `HF_TOKEN` from [Hugging Face](https://huggingface.co/settings/tokens) to use the **speaker separation**, make sure to request access to [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1).
 > 
-> You can obtain your `Groq_TOKEN` from [GroqCloud](https://huggingface.co/settings/tokens) Use the free API model 'llama3-70b' for translation instead of the standard model (optional).
+> You can obtain your `Groq_TOKEN` from [GroqCloud](https://console.groq.com/keys) Use the free API model 'llama3-70b' for translation instead of the standard model (optional).
 
 
 > [!TIP]
