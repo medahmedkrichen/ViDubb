@@ -237,13 +237,13 @@ options:
   --Bg_sound BG_SOUND   Keep the background sound of the original video,
                         though it might be slightly noisy
 ```
+<p align="center"><img src="inference.png" width="800" height="400">
 
 > [!TIP]
 >  --Bg_sound True: can lead to more noise in some videos with less background sound in origin video
 > 
 >  --LipSync True: will take more time and more memory
 
-<p align="center"><img src="inference.png" width="800" height="400">
 
 ### 8) Launch the Gradio Web App
 1. **Start the web application**:
