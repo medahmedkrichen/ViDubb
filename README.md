@@ -28,7 +28,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 | Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
-| <video src="https://esprittncom-my.sharepoint.com/:v:/g/personal/mohamedahmed_krichen_esprit_tn/ERgh1YkJ4XFCgkFrnRN6YYYBtb6W-fUwT2M5CYMxjJmgGQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=PvTpmc"> | <video src=""> |<video src=""> |
+| <video src="https://esprittncom-my.sharepoint.com/personal/mohamedahmed_krichen_esprit_tn/_layouts/15/stream.aspx?id=%2Fpersonal%2Fmohamedahmed_krichen_esprit_tn%2FDocuments%2FVidubb_videos%2FEt%20si%20le%20Soleil%20avalait%20Jupiter%20%20-%20What%20If%20Fran%C3%A7ais%20-%20Et%20Si%20%28720p%2C%20h264%2C%20youtube%29%2Emp4"> | <video src=""> |<video src=""> |
 
 
 ### LipSync Example
