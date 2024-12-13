@@ -29,7 +29,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 | Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
 | <video controls width="360" height="240">
-   <source src="" type='video/mp4'/>
+  
 </video> | <video src=""> |<video src=""> |
 
 
