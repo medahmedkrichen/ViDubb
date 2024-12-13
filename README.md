@@ -6,10 +6,10 @@
 </div>
 <div align="center">
     
-|Kaggle|Colab|PRs|
-|:-------:|:-------:|:-------:|
-|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-|More memory and GPU time!|Cancel Restarting Session when Asked|Pull Requests Welcome
+|Kaggle|Colab|Gradio|PRs|
+|:-------:|:-------:|:-------:|:-------:|
+|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|aaaa |[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+|More memory and GPU time!|Cancel Restarting Session when Asked|Use Gradio Web App| Pull Requests Welcome
   
 </div>
 
