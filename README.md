@@ -91,14 +91,14 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 
 ## Examples
 
-### With/Without Background Examples:
+### With/Without Background Examples
 
 | Original Video                                               | ViDubb With Background                                           | ViDubb Without Background                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------------------------------------------------ |
 | <video src=""> | <video src=""> |
 
 
-### LipSync Examples:
+### LipSync Examples
 
 | Original Video                                               | ViDubb with LipSync                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
