@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AI dubbing">
+    <meta name="description" content="AI video dubbing">
+    <meta name="description" content="dubbing">
+    <meta name="description" content="AI video dubbing">
+    <meta name="description" content="AI video dubbing">
+    <meta name="description" content="AI video dubbing">
+    
 </head>
 <body>
     <!-- Your website content goes here -->
