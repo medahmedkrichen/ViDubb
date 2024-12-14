@@ -1,10 +1,10 @@
-name: Translate README
+name: ViDubb README
 
 on:
   push:
     branches:
       - main
-      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,22 +16,22 @@ jobs:
           node-version: 12.x
       # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
       - name: Adding README - Chinese Simplified
-        uses: medahmedkrichen/ViDubb-AI-video-dubbing-readme@main
+        uses: medahmedkrichen/ViDubb-readme@main
         with:
           LANG: zh-CN
       - name: Adding README - Chinese Traditional
-        uses: medahmedkrichen/ViDubb-AI-video-dubbing-readme@main
+        uses: medahmedkrichen/ViDubb-readme@main
         with:
           LANG: zh-TW
       - name: Adding README - Hindi
-        uses: medahmedkrichen/ViDubb-AI-video-dubbing-readme@main
+        uses: medahmedkrichen/ViDubb-readme@main
         with:
           LANG: hi
       - name: Adding README - Arabic
-        uses: medahmedkrichen/ViDubb-AI-video-dubbing-readme@main
+        uses: medahmedkrichen/ViDubb-readme@main
         with:
           LANG: ar
       - name: Adding README - French
-        uses: medahmedkrichen/ViDubb-AI-video-dubbing-readme@main
+        uses: medahmedkrichen/ViDubb-readme@main
         with:
           LANG: fr
