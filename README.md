@@ -1,9 +1,10 @@
 <div align="center">
 
-# ViDubb: Free AI Dubbing/Translation with Voice and Emotion Cloning, Multilingual Support, and Lip-Sync
+
 
 
 <p align="center"><img src="images/Vidubb_img.png" width="1200" height="290" alt="Video dubbing">
+    # ViDubb: Free AI Dubbing/Translation with Voice and Emotion Cloning, Multilingual Support, and Lip-Sync
 </div>
 <div align="center">
     
