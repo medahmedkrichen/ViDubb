@@ -10,6 +10,13 @@
     <meta name="og:image" content="https://example.com/ai-video-dubbing.jpg">
     <meta name="og:type" content="website">
     <meta name="og:url" content="ai-video-dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    
 
     
 </head>
