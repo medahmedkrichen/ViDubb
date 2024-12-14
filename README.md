@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AI video dubbing with high-quality voice and emotion cloning for multilingual content. Sync voices with perfect lip-sync and background sound preservation.">
     <meta name="keywords" content="AI video dubbing, voice cloning, emotion cloning, multilingual dubbing, lip-sync AI, video dubbing automation, high-quality video dubbing, AI for video localization">
-    <meta name="og:title" content="AI Video Dubbing with Voice and Emotion Cloning">
+    <! --<meta name="og:title" content="AI Video Dubbing with Voice and Emotion Cloning"> -->
     <meta name="og:description" content="Revolutionary AI-powered video dubbing solution. Achieve seamless lip-sync, emotion-matching voiceovers, and multilingual support for all video content.">
     <meta name="og:image" content="https://example.com/ai-video-dubbing.jpg">
     <meta name="og:type" content="website">
