@@ -22,7 +22,7 @@
 
 <div align="center">
 
-    <title> # ViDubb: Free AI Dubbing/Translation with Voice and Emotion Cloning, Multilingual Support, and Lip-Sync </title>
+# ViDubb: Free AI Dubbing/Translation with Voice and Emotion Cloning, Multilingual Support, and Lip-Sync
 
 
 <p align="center"><img src="images/Vidubb_img.png" width="1200" height="290" alt="Video dubbing">
