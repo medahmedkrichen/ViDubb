@@ -87,7 +87,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 ## Introduction
 
-**ViDubb** is an advanced AI-powered video dubbing solution designed to deliver high-quality, efficient dubbing for multilingual content. By integrating cutting-edge voice cloning technology and dynamic lip-sync synchronization, ViDubb ensures that voiceovers are perfectly aligned with the original video’s dialogue and actor movements, even when multiple speakers are involved, providing a seamless viewing experience across languages.
+**ViDubb** (Video dubber) is an advanced AI-powered video dubbing solution designed to deliver high-quality, efficient dubbing for multilingual content. By integrating cutting-edge voice cloning technology and dynamic lip-sync synchronization, ViDubb ensures that voiceovers are perfectly aligned with the original video’s dialogue and actor movements, even when multiple speakers are involved, providing a seamless viewing experience across languages.
 
 Leveraging state-of-the-art AI, **ViDubb** sets new standards in dubbing accuracy and naturalness, making it ideal for global content localization, film, media, and educational purposes. The tool enables content creators and businesses to quickly adapt their videos for international audiences while maintaining top-tier audio and visual quality.
 
