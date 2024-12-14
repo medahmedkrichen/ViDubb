@@ -1,5 +1,3 @@
-
-
 <div align="center">
 
 # ViDubb: Free AI Dubbing/Translation with Voice and Emotion Cloning, Multilingual Support, and Lip-Sync
