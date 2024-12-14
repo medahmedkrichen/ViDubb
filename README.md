@@ -114,7 +114,7 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 - [ ] Implement sentence summarization.
 - [ ] Improve the Dynamic Lip-Sync Technology with a lot of speakers.
 - [ ] Deploy ViDubb on HuggingFace space
-
+- [ ] Deploy ViDubb on Docker hub
 
 ---
 
