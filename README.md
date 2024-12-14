@@ -6,10 +6,10 @@
 </div>
 <div align="center">
     
-|Kaggle|Gradio|Colab|
-|:-------:|:-------:|:-------:|
-|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Gradio](https://img.shields.io/badge/gradio-web_app-blue)](https://github.com/gradio-app/gradio)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)| 
-|More memory and GPU time!|Gradio Web App|Cancel Restarting Session when Asked|
+|Kaggle|Gradio|Colab|Youtube
+|:-------:|:-------:|:-------:|:-------:|
+|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Gradio](https://img.shields.io/badge/gradio-web_app-blue)](https://github.com/gradio-app/gradio)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|![Custom badge](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Fyoutube-channel-badge.ngoldack.vercel.app%2Fapi%2Fsubscriber)|
+|More memory and GPU time!|Gradio Web App|Cancel Restarting Session when Asked|Subscribe!|
   
 </div>
 
