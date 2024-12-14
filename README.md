@@ -45,6 +45,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 > [!NOTE]
 >
 > Due to GitHub restrictions, we had to downgrade the linked examples.
+>
 > To view the original videos, please visit our [YouTube channel](https://www.youtube.com/@medahmedkrichen). Don't forget to subscribe!
 
 
