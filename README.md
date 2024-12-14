@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI video dubbing with high-quality voice and emotion cloning for multilingual content. Sync voices with perfect lip-sync and background sound preservation.">
-    <meta name="keywords" content="AI video dubbing, voice cloning, emotion cloning, multilingual dubbing, lip-sync AI, video dubbing automation, high-quality video dubbing, AI for video localization">
-   <meta name="og:title" content="AI Dubbing"> 
-    <meta name="og:description" content="AI video dubbing dubber Ai dubbing translation">
-    <meta name="og:image" content="https://example.com/ai-video-dubbing.jpg">
-    <meta name="og:type" content="website">
-    <meta name="og:url" content="ai-video-dubbing">
-    <meta name="description" content="ai video dubbing">
-    <meta name="description" content="ai video dubbing">
-    <meta name="description" content="ai video dubbing">
-    <meta name="description" content="ai video dubbing">
-    <meta name="description" content="ai video dubbing">
-    <meta name="description" content="ai video dubbing">
-    
-
-    
-</head>
-<body>
-    <!-- Content related to AI video dubbing -->
-</body>
-</html>
-
 
 
 <div align="center">
@@ -363,4 +336,32 @@ By combining these techniques and leveraging the power of machine learning, the 
 `ViDubb` follows the Apache License 2.0. When using this tool, please comply with relevant laws, including copyright, data protection, and privacy laws. Do not use this tool without permission from the original author and/or rights holder.
 
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI video dubbing with high-quality voice and emotion cloning for multilingual content. Sync voices with perfect lip-sync and background sound preservation.">
+    <meta name="keywords" content="AI video dubbing, voice cloning, emotion cloning, multilingual dubbing, lip-sync AI, video dubbing automation, high-quality video dubbing, AI for video localization">
+   <meta name="og:title" content="AI Dubbing"> 
+    <meta name="og:description" content="AI video dubbing dubber Ai dubbing translation">
+    <meta name="og:image" content="https://example.com/ai-video-dubbing.jpg">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="ai-video-dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    <meta name="description" content="ai video dubbing">
+    
+
+    
+</head>
+<body>
+    <!-- Content related to AI video dubbing -->
+</body>
+</html>
+
 
