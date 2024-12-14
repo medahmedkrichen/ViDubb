@@ -25,7 +25,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 ---
 
 
-## Examples (comming soon)
+## Examples 
 
 ### With or Without Background Examples
 
@@ -58,7 +58,7 @@ ViDubb is an advanced AI-powered video dubbing solution focused on delivering hi
 
 
 ---
-### LipSync Example
+### LipSync Example (comming soon)
 
 | Original Video                                               | ViDubb with LipSync                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
