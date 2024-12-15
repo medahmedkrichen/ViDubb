@@ -374,26 +374,25 @@ class VideoDubbing:
                         'None': None}
     
 
-        if self.source_language == 'tr':
-            model_name = f"Helsinki-NLP/opus-mt-trk-{self.target_language}"
-        elif self.target_language == 'tr':
-            model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-trk"
-        elif self.source_language == 'zh-cn':
-            model_name = f"Helsinki-NLP/opus-mt-zh-{self.target_language}"
-        elif self.target_language == 'zh-cn':
-            model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-zh"
-        else:
-            model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-{self.target_language}"
-	
-        tokenizer = MarianTokenizer.from_pretrained(model_name)
-        model = MarianMTModel.from_pretrained(model_name).to(device)
-
-        if not self.Context_translation:
         
-           
-            
+        if not self.Context_translation:
+
             # Function to translate text
             def translate(sentence, model, tokenizer):
+                if self.source_language == 'tr':
+                    model_name = f"Helsinki-NLP/opus-mt-trk-{self.target_language}"
+                elif self.target_language == 'tr':
+                    model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-trk"
+                elif self.source_language == 'zh-cn':
+                    model_name = f"Helsinki-NLP/opus-mt-zh-{self.target_language}"
+                elif self.target_language == 'zh-cn':
+                    model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-zh"
+                else:
+                    model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-{self.target_language}"
+	
+                tokenizer = MarianTokenizer.from_pretrained(model_name)
+                model = MarianMTModel.from_pretrained(model_name).to(device)
+
                 inputs = tokenizer([sentence], return_tensors="pt", padding=True).to(device)
                 translated = model.generate(**inputs)
                 return tokenizer.decode(translated[0], skip_special_tokens=True)
@@ -427,14 +426,11 @@ class VideoDubbing:
                 
                 # Extracting the translation
                 match = re.search(pattern, chat_completion.choices[0].message.content)
-                if match:
-                    translation = match.group(1)
-                    return translation
+                
+                translation = match.group(1)
+                return translation
                     
-                inputs = tokenizer([sentence], return_tensors="pt", padding=True).to(device)
-                translated = model.generate(**inputs)
-                return tokenizer.decode(translated[0], skip_special_tokens=True)
-
+               
 
         
         records = []
