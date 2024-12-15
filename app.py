@@ -357,7 +357,6 @@ class VideoDubbing:
                         'None': None}
     
 
-
         if self.source_language == 'tr':
             model_name = f"Helsinki-NLP/opus-mt-trk-{self.target_language}"
         elif self.target_language == 'tr':
@@ -365,7 +364,7 @@ class VideoDubbing:
         else:
             model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-{self.target_language}"
 
-	if self.source_language == 'zh-cn':
+        if self.source_language == 'zh-cn':
             model_name = f"Helsinki-NLP/opus-mt-zh-{self.target_language}"
         elif self.target_language == 'zh-cn':
             model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-zh"
@@ -376,8 +375,6 @@ class VideoDubbing:
         model = MarianMTModel.from_pretrained(model_name).to(device)
 
         if not self.Context_translation:
-        
-           
             
             # Function to translate text
             def translate(sentence, model, tokenizer):
