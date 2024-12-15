@@ -357,32 +357,31 @@ class VideoDubbing:
                         'None': None}
     
 
-        if self.source_language == 'tr':
-            model_name = f"Helsinki-NLP/opus-mt-trk-{self.target_language}"
-        elif self.target_language == 'tr':
-            model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-trk"
-        elif self.source_language == 'zh-cn':
-            model_name = f"Helsinki-NLP/opus-mt-zh-{self.target_language}"
-        elif self.target_language == 'zh-cn':
-            model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-zh"
-        else:
-            model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-{self.target_language}"
-
-		
-        tokenizer = MarianTokenizer.from_pretrained(model_name)
-        model = MarianMTModel.from_pretrained(model_name).to(device)
-
         if not self.Context_translation:
-            
+
             # Function to translate text
-            def translate(sentence, model, tokenizer):
+            def translate(sentence):
+                if self.source_language == 'tr':
+                    model_name = f"Helsinki-NLP/opus-mt-trk-{self.target_language}"
+                elif self.target_language == 'tr':
+                    model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-trk"
+                elif self.source_language == 'zh-cn':
+                    model_name = f"Helsinki-NLP/opus-mt-zh-{self.target_language}"
+                elif self.target_language == 'zh-cn':
+                    model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-zh"
+                else:
+                    model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-{self.target_language}"
+	
+                tokenizer = MarianTokenizer.from_pretrained(model_name)
+                model = MarianMTModel.from_pretrained(model_name).to(device)
+
                 inputs = tokenizer([sentence], return_tensors="pt", padding=True).to(device)
                 translated = model.generate(**inputs)
                 return tokenizer.decode(translated[0], skip_special_tokens=True)
         else:
             client = Groq(api_key=self.Context_translation)
 
-            def translate(sentence, before_context, after_context, target_language, model, tokenizer):
+            def translate(sentence, before_context, after_context, target_language):
                 chat_completion = client.chat.completions.create(
                 messages=[
                     {
@@ -409,14 +408,11 @@ class VideoDubbing:
                 
                 # Extracting the translation
                 match = re.search(pattern, chat_completion.choices[0].message.content)
-                if match:
-                    translation = match.group(1)
-                    return translation
+                
+                translation = match.group(1)
+                return translation
                     
-                inputs = tokenizer([sentence], return_tensors="pt", padding=True).to(device)
-                translated = model.generate(**inputs)
-                return tokenizer.decode(translated[0], skip_special_tokens=True)
-
+               
 
         
         records = []
@@ -425,12 +421,12 @@ class VideoDubbing:
         for i in range(len(new_record)):
             final_sentance = new_record[i][0]
             if not self.Context_translation:
-                translated = translate(sentence=final_sentance, model=model, tokenizer=tokenizer)
+                translated = translate(sentence=final_sentance)
                 
             else:
                 before_context = new_record[i-1][0] if i - 1 in range(len(new_record)) else ""
                 after_context = new_record[i+1][0] if i + 1 in range(len(new_record)) else ""
-                translated = translate(sentence=final_sentance, before_context=before_context, after_context=after_context, target_language=self.target_language, model=model, tokenizer=tokenizer)
+                translated = translate(sentence=final_sentance, before_context=before_context, after_context=after_context, target_language=self.target_language )
             speaker = most_occured_speaker
             
             max_overlap = 0
