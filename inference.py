@@ -426,9 +426,12 @@ class VideoDubbing:
                 
                 # Extracting the translation
                 match = re.search(pattern, chat_completion.choices[0].message.content)
-                
-                translation = match.group(1)
-                return translation
+
+		try:
+                    translation = match.group(1)
+                    return translation
+		except:
+		    return ''
                     
                
 
