@@ -378,7 +378,7 @@ class VideoDubbing:
         if not self.Context_translation:
 
             # Function to translate text
-            def translate(sentence, model, tokenizer):
+            def translate(sentence):
                 if self.source_language == 'tr':
                     model_name = f"Helsinki-NLP/opus-mt-trk-{self.target_language}"
                 elif self.target_language == 'tr':
@@ -439,7 +439,7 @@ class VideoDubbing:
         for i in range(len(new_record)):
             final_sentance = new_record[i][0]
             if not self.Context_translation:
-                translated = translate(sentence=final_sentance, model=model, tokenizer=tokenizer)
+                translated = translate(sentence=final_sentance)
                 
             else:
                 before_context = new_record[i-1][0] if i - 1 in range(len(new_record)) else ""
