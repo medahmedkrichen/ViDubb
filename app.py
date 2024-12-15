@@ -661,14 +661,12 @@ language_mapping = {
     'Dutch': 'nl',
     'Czech': 'cs',
     'Arabic': 'ar',
-    'Chinese (Simplified)': 'zh-CN',
+    'Chinese (Simplified)': 'zh-cn',
     'Japanese': 'ja',
     'Korean': 'ko',
     'Hindi': 'hi', 
-    'Swedish': 'sv', 
-    'Danish': 'da', 
-    'Finnish': 'fi', 
-    'Greek': 'el'
+    'Hungarian': 'hu'
+
 }
 
 
