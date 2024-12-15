@@ -361,15 +361,13 @@ class VideoDubbing:
             model_name = f"Helsinki-NLP/opus-mt-trk-{self.target_language}"
         elif self.target_language == 'tr':
             model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-trk"
-        else:
-            model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-{self.target_language}"
-
-        if self.source_language == 'zh-cn':
+        elif self.source_language == 'zh-cn':
             model_name = f"Helsinki-NLP/opus-mt-zh-{self.target_language}"
         elif self.target_language == 'zh-cn':
             model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-zh"
         else:
             model_name = f"Helsinki-NLP/opus-mt-{self.source_language}-{self.target_language}"
+
 		
         tokenizer = MarianTokenizer.from_pretrained(model_name)
         model = MarianMTModel.from_pretrained(model_name).to(device)
