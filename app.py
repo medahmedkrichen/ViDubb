@@ -752,4 +752,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
 print("Launching Gradio interface...")
 demo.queue()
-demo.launch()
+demo.launch(share=True)
