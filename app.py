@@ -654,8 +654,6 @@ language_mapping = {
     'French': 'fr',
     'German': 'de', 
     'Italian': 'it', 
-    'Portuguese': 'pt',
-    'Polish': 'pl', 
     'Turkish': 'tr',
     'Russian': 'ru',
     'Dutch': 'nl',
