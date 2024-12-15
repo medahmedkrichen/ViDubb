@@ -399,7 +399,7 @@ class VideoDubbing:
         else:
             client = Groq(api_key=self.Context_translation)
 
-            def translate(sentence, before_context, after_context, target_language, model, tokenizer):
+            def translate(sentence, before_context, after_context, target_language):
                 chat_completion = client.chat.completions.create(
                 messages=[
                     {
@@ -444,7 +444,7 @@ class VideoDubbing:
             else:
                 before_context = new_record[i-1][0] if i - 1 in range(len(new_record)) else ""
                 after_context = new_record[i+1][0] if i + 1 in range(len(new_record)) else ""
-                translated = translate(sentence=final_sentance, before_context=before_context, after_context=after_context, target_language=self.target_language, model=model, tokenizer=tokenizer)
+                translated = translate(sentence=final_sentance, before_context=before_context, after_context=after_context, target_language=self.target_language )
             speaker = most_occured_speaker
             
             max_overlap = 0
