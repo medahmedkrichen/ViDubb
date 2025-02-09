@@ -61,7 +61,6 @@ load_dotenv()
 
 
 
-
 class VideoDubbing:
     def __init__(self, Video_path, source_language, target_language, 
                  LipSync=True, Voice_denoising = True, whisper_model="turbo",
