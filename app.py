@@ -603,7 +603,7 @@ class VideoDubbing:
         subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
         shutil.move(output_file_paths, "audio/")
-        os.system('pip install -r requirements.txt > /dev/null 2>&1')
+        # os.system('pip install -r requirements.txt > /dev/null 2>&1')
         
         
         if self.Voice_denoising:
