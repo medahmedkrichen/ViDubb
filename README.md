@@ -10,10 +10,10 @@
 </div>
 <div align="center">
     
-|Kaggle|Gradio|Youtube|Colab|
-|:-------:|:-------:|:-------:|:-------:|
-|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Gradio](https://img.shields.io/badge/gradio-web_app-blue)](https://github.com/gradio-app/gradio)|[![Youtube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@medahmedkrichen)|[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1--ILLhZuZcruHMH2tpk4_tAD2SHK61EC?authuser=2)|
-|More memory and GPU time!|Gradio Web App|Subscribe!|Cancel Restarting Session when Asked|
+|Kaggle|Gradio|Youtube|
+|:-------:|:-------:|:-------:|
+|[![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/medahmedkrichen/vidubb-kaggle-notebook)|[![Gradio](https://img.shields.io/badge/gradio-web_app-blue)](https://github.com/gradio-app/gradio)|[![Youtube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@medahmedkrichen)|
+|More memory and GPU time!|Gradio Web App|Subscribe!|
   
 </div>
 
@@ -115,6 +115,7 @@ Our mission is to provide an efficient and high-quality AI-driven dubbing soluti
 
 ## TO DO LIST
 
+- [ ] Use subs if existed
 - [ ] Implement sentence summarization.
 - [ ] Improve the Dynamic Lip-Sync Technology with a lot of speakers.
 - [ ] Deploy ViDubb on HuggingFace space
