@@ -205,12 +205,12 @@ Before starting, ensure you have [Anaconda](https://docs.anaconda.com/anaconda/i
 ### 6) Download Wave2Lip Models
 1. **Download the Wav2Lip model**:
     ```bash
-    wget 'https://objects.githubusercontent.com/github-production-release-asset-2e65be/898150353/def33f0a-cd75-4b42-a995-6acfa8629ca8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250510%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250510T145054Z&X-Amz-Expires=300&X-Amz-Signature=71998621b7aed420a4af4e14a30540d583b97a08db6668cfec4fa953e543e8f1&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dwav2lip_gan.1.1.pth&response-content-type=application%2Foctet-stream' -O 'Wav2Lip/wav2lip_gan.pth'
+    wget 'https://github.com/medahmedkrichen/ViDubb/releases/download/weights2/wav2lip_gan.1.1.pth' -O 'Wav2Lip/wav2lip_gan.pth'
     ```
 
 2. **Download the face detection model**:
     ```bash
-    wget "https://objects.githubusercontent.com/github-production-release-asset-2e65be/898150353/0e7578db-497b-471e-8e46-9253cb62f844?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250510%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250510T145134Z&X-Amz-Expires=300&X-Amz-Signature=315fcf4bcc1b28a57019c4e428cbe50e509afd2477e40e5369ee06697627c83b&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Ds3fd-619a316812.1.1.pth&response-content-type=application%2Foctet-stream" -O "Wav2Lip/face_detection/detection/sfd/s3fd.pth"
+    wget "https://github.com/medahmedkrichen/ViDubb/releases/download/weights1/s3fd-619a316812.1.1.pth" -O "Wav2Lip/face_detection/detection/sfd/s3fd.pth"
     ```
 
 ### 7) Run the Project
