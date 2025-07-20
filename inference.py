@@ -258,6 +258,7 @@ class VideoDubbing:
                 for word in segment.words:
                         time_stamped.append([word.word, word.start, word.end])
                         full_text.append(word.word)
+        print(time_stamped)
         full_text = "".join(full_text)       
         # Decompose Long Sentences
 
@@ -390,7 +391,6 @@ class VideoDubbing:
                 tokenizer = MarianTokenizer.from_pretrained(model_name)
                 model = MarianMTModel.from_pretrained(model_name).to(device)
                 model = model.to('cpu')
-                print([sentence])
                 inputs = tokenizer([sentence], return_tensors="pt", padding=True).to('cpu')
                 translated = model.generate(**inputs)
                 return tokenizer.decode(translated[0], skip_special_tokens=True)
