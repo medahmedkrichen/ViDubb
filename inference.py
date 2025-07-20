@@ -248,20 +248,17 @@ class VideoDubbing:
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
-        model = whisper.load_model(self.whisper_model, device=device)
-        transcript = model.transcribe(
-            word_timestamps=True,
-            audio=self.Video_path,
-          )
+        model = WhisperModel("turbo", device="cuda")
+	segments, info = model.transcribe("/kaggle/input/Not Your Average 18 Year Old - Donald Trump OPENS UP About Baron Trump - Valuetainment (720p h264 youtube).mp4", word_timestamps=True)
+	segments = list(segments) 
 			 
         time_stamped = []
-        full_text = []
-        for segment in transcript['segments']:
-            for word in segment['words']:
-                time_stamped.append([word['word'],word['start'],word['end']])
-                full_text.append(word['word'])
-        full_text = "".join(full_text)
-       
+	full_text = []
+	for segment in segments:
+    		for word in segment.words:
+        		time_stamped.append([word.word, word.start, word.end])
+        		full_text.append(word.word)
+	full_text = "".join(full_text)       
         # Decompose Long Sentences
 
         
