@@ -50,3 +50,4 @@ scikit-image==0.23.2
 nltk==3.2.4
 gradio==5.8.0
 faster-whisper==1.1.1
+transformers==4.46.3
