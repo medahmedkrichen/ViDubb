@@ -69,7 +69,7 @@ group.add_argument('--video_url', type=str, help='Single video URL')
 
 parser.add_argument('--source_language', type=str, help='Video source language', required=True)
 parser.add_argument('--target_language', type=str, help='Video target language', required=True)
-parser.add_argument('--whisper_model', type=str, help='Chose the whisper model based on your device requirements', default="turbo")
+parser.add_argument('--whisper_model', type=str, help='Chose the whisper model based on your device requirements', default="medium")
 parser.add_argument('--LipSync', type=bool, help='Lip synchronization of the resut audio to the synthesized video', default=False)
 parser.add_argument('--Bg_sound', type=bool, help='Keep the background sound of the original video, though it might be slightly noisy', default=False)
 
@@ -81,7 +81,7 @@ args = parser.parse_args()
 
 class VideoDubbing:
     def __init__(self, Video_path, source_language, target_language, 
-                 LipSync=True, Voice_denoising = True, whisper_model="turbo",
+                 LipSync=True, Voice_denoising = True, whisper_model="medium",
                  Context_translation = "API code here", huggingface_auth_token="API code here"):
         
         self.Video_path = Video_path
@@ -248,7 +248,7 @@ class VideoDubbing:
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
-        model = WhisperModel("turbo", device="cuda")
+        model = WhisperModel(whisper_model, device="cuda")
         segments, info = model.transcribe("/kaggle/input/Not Your Average 18 Year Old - Donald Trump OPENS UP About Baron Trump - Valuetainment (720p h264 youtube).mp4", word_timestamps=True)
         segments = list(segments) 
 			 
