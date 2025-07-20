@@ -258,7 +258,6 @@ class VideoDubbing:
                 for word in segment.words:
                         time_stamped.append([word.word, word.start, word.end])
                         full_text.append(word.word)
-        print(time_stamped)
         full_text = "".join(full_text)       
         # Decompose Long Sentences
 
@@ -301,6 +300,7 @@ class VideoDubbing:
             count_sentances[i+1] = "".join(tmp)
 
         record = []
+	print(time_stamped[k][1], starts)
         print(time_stamped_sentances)
         for sentence in time_stamped_sentances:
             record.append([sentence, time_stamped_sentances[sentence][0], time_stamped_sentances[sentence][1]])
