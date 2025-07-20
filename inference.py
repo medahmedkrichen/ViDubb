@@ -248,8 +248,8 @@ class VideoDubbing:
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
-        model = WhisperModel(whisper_model, device="cuda")
-        segments, info = model.transcribe("/kaggle/input/Not Your Average 18 Year Old - Donald Trump OPENS UP About Baron Trump - Valuetainment (720p h264 youtube).mp4", word_timestamps=True)
+        model = WhisperModel(self.whisper_model, device=device)
+        segments, info = model.transcribe(self.Video_path, word_timestamps=True)
         segments = list(segments) 
 			 
         time_stamped = []
