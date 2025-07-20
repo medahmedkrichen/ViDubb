@@ -389,7 +389,7 @@ class VideoDubbing:
 	
                 tokenizer = MarianTokenizer.from_pretrained(model_name)
                 model = MarianMTModel.from_pretrained(model_name).to(device)
-
+                model = model.to('cpu')
                 inputs = tokenizer([sentence], return_tensors="pt", padding=True).to(device)
                 translated = model.generate(**inputs)
                 return tokenizer.decode(translated[0], skip_special_tokens=True)
