@@ -53,6 +53,7 @@ from tools.utils import detect_and_crop_faces
 from tools.utils import cosine_similarity
 from tools.utils import extract_and_save_most_common_face
 from tools.utils import get_overlap
+from faster_whisper import WhisperModel
 
         
 nltk.download('punkt')
@@ -63,7 +64,7 @@ load_dotenv()
 
 class VideoDubbing:
     def __init__(self, Video_path, source_language, target_language, 
-                 LipSync=True, Voice_denoising = True, whisper_model="turbo",
+                 LipSync=True, Voice_denoising = True, whisper_model="medium",
                  Context_translation = "API code here", huggingface_auth_token="API code here"):
         
         self.Video_path = Video_path
@@ -230,18 +231,16 @@ class VideoDubbing:
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
-        model = whisper.load_model(self.whisper_model, device=device)
-        transcript = model.transcribe(
-            word_timestamps=True,
-            audio=self.Video_path,
-          )
+        model = WhisperModel(self.whisper_model, device=device)
+        segments, info = model.transcribe(self.Video_path, word_timestamps=True)
+        segments = list(segments) 
 			 
         time_stamped = []
         full_text = []
-        for segment in transcript['segments']:
-            for word in segment['words']:
-                time_stamped.append([word['word'],word['start'],word['end']])
-                full_text.append(word['word'])
+        for segment in segments:
+                for word in segment.words:
+                        time_stamped.append([word.word, word.start, word.end])
+                        full_text.append(word.word)
         full_text = "".join(full_text)
        
         # Decompose Long Sentences
@@ -486,10 +485,16 @@ class VideoDubbing:
         combined = AudioSegment.silent(duration=natural_scilence*1000) 
 
         tip = 350
-        
+
+	def truncate_text(text, max_tokens=50):
+                words = text.split()
+                if len(words) <= max_tokens:
+                        return text
+                return ' '.join(words[:max_tokens]) + '...'
+	
         for i in range(len(records)):
             print('previous_silence_time: ', previous_silence_time)
-            tts.tts_to_file(text=records[i][0],
+            tts.tts_to_file(text=truncate_text(records[i][0]),
                         file_path=f"audio_chunks/{i}.wav",
                         speaker_wav=f"speakers_audio/{records[i][4]}.wav",
                         language=self.target_language,
@@ -725,9 +730,9 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
                     value="French"
                 )
                 whisper_model = gr.Dropdown(
-                    choices=["tiny", "base", "small", "medium", "large", "turbo"],
+                    choices=["tiny", "base", "small", "medium", "large"],
                     label="Whisper Model",
-                    value="turbo"
+                    value="medium"
                 )
                 use_wav2lip = gr.Checkbox(
                     label="Use Wav2Lip for lip sync",
