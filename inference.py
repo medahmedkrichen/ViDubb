@@ -501,10 +501,15 @@ class VideoDubbing:
         combined = AudioSegment.silent(duration=natural_scilence*1000) 
 
         tip = 350
-        
+
+        def truncate_text(text, max_tokens=300):
+                words = text.split()
+                if len(words) <= max_tokens:
+                        return text
+                return ' '.join(words[:max_tokens]) + '...'
         for i in range(len(records)):
             print('previous_silence_time: ', previous_silence_time)
-            tts.tts_to_file(text=records[i][0],
+            tts.tts_to_file(text=truncate_text(records[i][0]),
                         file_path=f"audio_chunks/{i}.wav",
                         speaker_wav=f"speakers_audio/{records[i][4]}.wav",
                         language=self.target_language,
