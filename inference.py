@@ -69,7 +69,7 @@ group.add_argument('--video_url', type=str, help='Single video URL')
 
 parser.add_argument('--source_language', type=str, help='Video source language', required=True)
 parser.add_argument('--target_language', type=str, help='Video target language', required=True)
-parser.add_argument('--whisper_model', type=str, help='Chose the whisper model based on your device requirements', default="large")
+parser.add_argument('--whisper_model', type=str, help='Chose the whisper model based on your device requirements', default="medium")
 parser.add_argument('--LipSync', type=bool, help='Lip synchronization of the resut audio to the synthesized video', default=False)
 parser.add_argument('--Bg_sound', type=bool, help='Keep the background sound of the original video, though it might be slightly noisy', default=False)
 
@@ -81,7 +81,7 @@ args = parser.parse_args()
 
 class VideoDubbing:
     def __init__(self, Video_path, source_language, target_language, 
-                 LipSync=True, Voice_denoising = True, whisper_model="large",
+                 LipSync=True, Voice_denoising = True, whisper_model="medium",
                  Context_translation = "API code here", huggingface_auth_token="API code here"):
         
         self.Video_path = Video_path
