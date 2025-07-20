@@ -231,7 +231,7 @@ class VideoDubbing:
         
         most_occured_speaker= max(list(speakers_rolls.values()),key=list(speakers_rolls.values()).count)
         
-        model = WhisperModel(self.whisper_model, device=device)
+        model = WhisperModel(self.whisper_model, device='cuda')
         segments, info = model.transcribe(self.Video_path, word_timestamps=True)
         segments = list(segments) 
 			 
