@@ -23,7 +23,6 @@ os.system('pip install numpy==1.26.4 > /dev/null 2>&1')
 
 from pyannote.audio import Pipeline
 from audio_separator.separator import Separator
-import whisper
 from transformers import MarianMTModel, MarianTokenizer
 from TTS.api import TTS
 from pydub import AudioSegment
@@ -55,6 +54,7 @@ from tools.utils import detect_and_crop_faces
 from tools.utils import cosine_similarity
 from tools.utils import extract_and_save_most_common_face
 from tools.utils import get_overlap
+from faster_whisper import WhisperModel
 
         
 nltk.download('punkt')
