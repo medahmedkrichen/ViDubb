@@ -502,7 +502,7 @@ class VideoDubbing:
 
         tip = 350
 
-        def truncate_text(text, max_tokens=300):
+        def truncate_text(text, max_tokens=50):
                 words = text.split()
                 if len(words) <= max_tokens:
                         return text
