@@ -274,7 +274,7 @@ class VideoDubbing:
         
         time_stamped_sentances = {}
         count_sentances = {}
-        
+        print(sentences)
         letter = 0
         for i in range(len(sentences)):
             tmp = []
@@ -300,8 +300,6 @@ class VideoDubbing:
             count_sentances[i+1] = "".join(tmp)
 
         record = []
-        print(time_stamped[k][1], starts)
-        print(time_stamped_sentances)
         for sentence in time_stamped_sentances:
             record.append([sentence, time_stamped_sentances[sentence][0], time_stamped_sentances[sentence][1]])
         
